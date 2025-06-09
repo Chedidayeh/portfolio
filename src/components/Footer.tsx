@@ -1,0 +1,49 @@
+import { FaLocationArrow } from "react-icons/fa6";
+import MagicButton from "./ui/MagicButton";
+import Image from "next/image";
+
+export const mySocials = [
+  {
+    name: "WhatsApp",
+    href: "",
+    icon: "/assets/socials/whatsApp.svg",
+  },
+  {
+    name: "Linkedin",
+    href: "https://www.linkedin.com/in/ali-sanati/",
+    icon: "/assets/socials/linkedIn.svg",
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/ali.sanatidev/reels/",
+    icon: "/assets/socials/instagram.svg",
+  },
+];
+const Footer = () => {
+  return (
+    <footer className="w-full pt-20 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-52 pb-10">
+      <section className="flex flex-col sm:flex-row flex-wrap items-center justify-between gap-5 pb-3 text-sm text-neutral-400 c-space">
+        <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
+        <div className="flex gap-2">
+        <a href="/">
+        <Image
+          src="/images/logo.png"
+          alt="" width={120}
+          height={80}
+          className="max-h-[80px] h-full object-contain object-center" />
+      </a>
+        </div>
+        <div className="flex gap-3">
+          {mySocials.map((social, index) => (
+            <a href={social.href} key={index}>
+              <img src={social.icon} className="w-5 h-5" alt={social.name} />
+            </a>
+          ))}
+        </div>
+        <p>© 2025 Ali. All rights reserved.</p>
+      </section>
+    </footer>
+  );
+};
+
+export default Footer;
