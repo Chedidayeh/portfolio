@@ -8,6 +8,9 @@ import { IconX } from "@tabler/icons-react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { IconType } from "react-icons/lib";
+import { LinkPreview } from "./ui/link-preview";
+import MagicButton from "./ui/MagicButton";
+import { FaLocationArrow } from "react-icons/fa6";
 
 interface Project {
   title: string;
@@ -163,13 +166,21 @@ const CardWithPopover = ({
               <motion.p className="text-2xl sm:text-3xl md:text-4xl font-medium text-white">
                 {item.title}
               </motion.p>
-              <motion.p className="my-3 sm:my-4 text-sm sm:text-base font-medium text-white">
+              <motion.p className="my-3 sm:my-4 text-sm sm:text-base font-medium text-gray-400 ">
                 {item.description}
               </motion.p>
               <div className="">
-                <div className="flex flex-row items-start justify-start mb-6 sm:mb-10 w-full">
+                <div className="flex flex-row items-start justify-start w-full">
                   <AnimatedTooltip items={item.stack} />
                 </div>
+              </div>
+              <div className="flex items-center justify-center mb-4">
+                <MagicButton 
+                  title="Visit Project" 
+                  icon={<FaLocationArrow />} 
+                  position="right"
+                  handleClick={() => window.open(item.link, '_blank')}
+                />
               </div>
               {item.content && (
                 <div className="bg-neutral-800 p-4 sm:p-6 md:p-8 lg:p-14 rounded-2xl sm:rounded-3xl mb-4">
@@ -199,7 +210,7 @@ const CardWithPopover = ({
         </AnimatePresence>
         <Card>
           <CardTitle className="text-xl sm:text-2xl">{item.title}</CardTitle>
-          <CardDescription className="text-sm sm:text-base">{item.description}</CardDescription>
+          <CardDescription className="text-sm sm:text-base ">{item.description}</CardDescription>
           <div className="flex flex-row items-center justify-center mb-6 sm:mb-10 w-full mt-3 sm:mt-4">
             <AnimatedTooltip items={item.stack.slice(0, 3)} />
             {item.stack.length > 3 && (

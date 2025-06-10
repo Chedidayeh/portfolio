@@ -1,3 +1,4 @@
+import { Contact } from "@/components/Contact";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HereSection";
 import { Skills } from "@/components/MySkills";
@@ -13,6 +14,7 @@ export default function Home() {
     <Skills/>
     <Resume/>
     <Projects/>
+    <Contact/>
     <Footer />
 
     </>

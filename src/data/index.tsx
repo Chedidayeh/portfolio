@@ -13,6 +13,7 @@ import {
   SiElasticsearch,
   SiKibana,
 } from "react-icons/si";
+import NextImage from 'next/image'
 
 const COVID19 = () => {
   return (
@@ -44,44 +45,74 @@ const COVID19 = () => {
   );
 };
 
+
+
+
 const AestheticPro = () => {
+  const features = [
+    {
+      src: "/aestheticpro1.png",
+      title: "Marketplace Hub",
+      description: "A dynamic platform connecting sellers and buyers, enabling seamless product discovery, customization, and transactions."
+    },
+    {
+      src: "/aestheticpro2.png",
+      title: "Design Customization",
+      description: "Empowers sellers and clients to upload, edit, and apply designs to a wide range of products, delivering a personalized and interactive experience."
+    },
+    {
+      src: "/aestheticpro3.png",
+      title: "Analytics Dashboard",
+      description: "Equips admins and sellers with comprehensive insights into sales trends, product performance, and user engagement to drive strategic decisions."
+    },
+    {
+      src: "/aestheticpro4.png",
+      title: "Order Management",
+      description: "Streamlines operations with real-time order tracking, status updates, and notifications, enhancing efficiency and customer satisfaction."
+    },
+    {
+      src: "/aestheticpro5.png",
+      title: "Referral Program",
+      description: "Boosts engagement and revenue by enabling users to earn commissions through product referrals with a robust, user-friendly system."
+    },
+    {
+      src: "/aestheticpro6.png",
+      title: "Store Levels",
+      description: "Unlock progressive benefits based on sales milestones: Level 1 offers up to 30 products and designs with priority listing, Level 2 adds 50 products and trending store highlights, Level 3 includes 70 products and priority customer support, and Level 4 provides unlimited products and premium marketing support."
+    },
+    {
+      src: "/aestheticpro7.png",
+      title: "Seller Store",
+      description: "A personalized storefront for sellers to showcase products and designs, featuring a main store page with follower tracking, product sorting, and filtering options for an optimized shopping experience."
+    }
+  ];
   return (
-    <div className="bg-neutral-800  rounded-3xl mb-4">
-      <p className="mb-4 sm:mb-8 text-xs sm:text-sm md:text-2xl font-bold text-neutral-200">
-        Platfrom Link: {" "}
-        <LinkPreview
-          url="https://aestheticpro.vercel.app/"
-          className="font-bold bg-clip-text text-blue-500"
-        >
-          AestheticPro
-        </LinkPreview>
-        {" "}
+    <div className="bg-neutral-800 rounded-3xl mb-4">   
+      <div className='mx-auto max-w-6xl px-6 lg:px-8'>
+        <div className='space-y-12'>
+          {features.map((image, index) => (
+            <div key={index} className='flex flex-col space-y-12'>
+              <h3 className="text-2xl font-bold text-white text-center mb-4">{image.title}</h3>
+              <div className='relative w-full h-[400px] overflow-hidden rounded-xl bg-gray-900/5 ring-1 ring-inset ring-gray-900/10'>
+                <img
+                  src={image.src}
+                  alt={image.description}
+                  width={3000}
+                  height={3000}
+                  className='object-cover w-full h-full'
+                />
+              </div>
 
-
-      </p>
-      <div className="font-bold text-2xl text-neutral-200 mb-4">
-        Key Features:
+              <div className="flex items-center justify-center my-4">
+              <p className='text-base font-medium text-center text-white leading-relaxed max-w-3xl'>
+                {image.description}
+              </p>
+              </div>
+              <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
+            </div>
+          ))}
+        </div>
       </div>
-      <ul className="text-neutral-400 text-base md:text-xl font-sans max-w-3xl mx-auto list-disc list-inside space-y-3">
-        <li>
-          <span className="font-semibold text-neutral-200">Real-Time Data Updates:</span> Fetches and displays live COVID-19 case numbers, recoveries, and deaths from reliable APIs like WHO or Johns Hopkins.
-        </li>
-        <li>
-          <span className="font-semibold text-neutral-200">Interactive Data Visualizations:</span> Includes dynamic charts (e.g., line graphs, heatmaps) built with Chart.js or D3.js for tracking trends over time.
-        </li>
-        <li>
-          <span className="font-semibold text-neutral-200">Global and Regional Breakdown:</span> Provides detailed statistics by country, region, or continent with a searchable and filterable interface.
-        </li>
-        <li>
-          <span className="font-semibold text-neutral-200">Predictive Analytics:</span> Uses machine learning models to forecast case trends based on historical data and current patterns.
-        </li>
-        <li>
-          <span className="font-semibold text-neutral-200">User-Friendly Interface:</span> Responsive design with dark/light mode, optimized for mobile and desktop, ensuring accessibility.
-        </li>
-        <li>
-          <span className="font-semibold text-neutral-200">Vaccination Tracking:</span> Monitors global vaccination rates, including doses administered and coverage percentages.
-        </li>
-      </ul>
     </div>
   );
 };
