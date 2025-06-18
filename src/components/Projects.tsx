@@ -174,7 +174,7 @@ const CardWithPopover = ({
                   <AnimatedTooltip items={item.stack} />
                 </div>
               </div>
-              <div className="flex items-center justify-center mb-4">
+              <div className="flex items-center justify-center  my-4">
                 <MagicButton 
                   title="Visit Project" 
                   icon={<FaLocationArrow />} 
