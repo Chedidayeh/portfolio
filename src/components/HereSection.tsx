@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { Skills } from "@/components/Skills";
 import { Cover } from "@/components/ui/cover";
@@ -5,6 +7,7 @@ import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import Image from "next/image";
 import { BackgroundBeams } from './ui/background-beams';
+import { FileDown } from 'lucide-react';
 
 const HeroSection = () => {
 return (
@@ -23,11 +26,28 @@ return (
         <h2 className="bg-clip-text text-transparent text-start bg-gradient-to-b  from-neutral-600 to-white text-2xl md:text-4xl lg:text-6xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
           Dayeh Chadi, <br /> Software <Cover>Engineer</Cover>.
         </h2>
+        <div className='gap-2 flex flex-col'>
         <a href="#contact"
           className="text-white border-b hover:rounded-xl  border-[#525252] hover:p-[10px] hover:bg-[#5070ff2f] transition-all ease-in-out mr-auto py-[10px] font-[600]">
             Contact Me →
             </a>
+            <div
+          className="text-white cursor-pointer flex border-b hover:rounded-xl  border-[#525252] hover:p-[10px] hover:bg-[#5070ff2f] transition-all ease-in-out mr-auto py-[10px] font-[600]"
+          onClick={() => {
+            const link = document.createElement('a');
+            link.href = '/resume.pdf';
+            link.download = 'Chedi_Dayeh_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }}
+        >
+            Download my resume ↓
+            </div>
+        </div>
+
       </div>
+      
     </div>
 
     {/* my image */}
@@ -63,7 +83,6 @@ return (
 
     <ShootingStars className="z-[-1] " />
     <StarsBackground className="z-[-1] " />
-    <BackgroundBeams />
 
 
     

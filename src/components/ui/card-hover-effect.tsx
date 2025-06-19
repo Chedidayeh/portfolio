@@ -1,10 +1,7 @@
-"use client"
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 
 import { useState } from "react";
-import { AnimatedTooltip } from "./animated-tooltip";
-import { IconType } from "react-icons/lib";
 
 export const HoverEffect = ({
   items,
@@ -13,13 +10,7 @@ export const HoverEffect = ({
   items: {
     title: string;
     description: string;
-    link: string;
-    stack : {
-      id: number
-      name : string
-      designation : string
-      icon : IconType
-    }[]
+    src : string
   }[];
   className?: string;
 }) => {
@@ -28,22 +19,23 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
+        items.length < 3
+          ? "flex justify-center py-10"
+          : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 justify-center",
         className
       )}
     >
       {items.map((item, idx) => (
-        <a
-          href={item?.link}
-          key={item?.link}
-          className="relative group  block p-2 h-full w-full"
+        <div
+          key={item?.title}
+          className="relative group block p-2 h-full w-full max-w-lg "
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full  bg-slate-800/[0.8] block  rounded-3xl"
+              className="absolute inset-0 h-full w-full bg-slate-800/[0.8] block rounded-2xl sm:rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -58,13 +50,17 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <CardTitle className="text-2xl">{item.title}</CardTitle>
-            <CardDescription className="text-base">{item.description}</CardDescription>
-            <div className="flex flex-row items-center justify-center mb-10 w-full mt-4">
-                    <AnimatedTooltip items={item.stack} />
-            </div>
+            {item.src && (
+              <img
+                src={item.src}
+                alt={item.title}
+                className="w-full h-full object-cover rounded-2xl mb-2 border border-neutral-800"
+              />
+            )}
+            <CardTitle className="text-center">{item.title}</CardTitle>
+            <CardDescription>{item.description}</CardDescription>
           </Card>
-        </a>
+        </div>
       ))}
     </div>
   );
@@ -80,7 +76,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border  border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-xl sm:rounded-2xl h-full w-full p-3 sm:p-4 overflow-hidden bg-black border border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -98,7 +94,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-2 sm:mt-4", className)}>
       {children}
     </h4>
   );
@@ -113,7 +109,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-4 text-zinc-400 tracking-wide leading-relaxed text-sm sm:text-base",
         className
       )}
     >

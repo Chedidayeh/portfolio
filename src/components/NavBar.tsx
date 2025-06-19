@@ -1,7 +1,7 @@
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { IconHome } from "@tabler/icons-react";
-import { Code2Icon, FolderCode, GraduationCap, Mail } from "lucide-react";
+import { Code2Icon, FolderCode, GraduationCap, Mail, Trophy } from "lucide-react";
 
 export function NavBar() {
   const links = [
@@ -41,6 +41,13 @@ export function NavBar() {
         <FolderCode className="h-full w-full  text-neutral-300" />
       ),
       href: "#projects",
+    },
+    {
+      title: "Certifications",
+      icon: (
+        <Trophy className="h-full w-full  text-neutral-300" />
+      ),
+      href: "#certifications",
     },
     {
       title: "Contact",
