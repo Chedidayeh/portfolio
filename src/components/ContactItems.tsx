@@ -16,7 +16,7 @@ interface ContactItems {
 const GridItem = ({ area, icon, title, description, href }: ContactItems) => {
   return (
     <li className={`min-h-[14rem] list-none ${area}`}>
-      <div className="relative h-full w-96 rounded-2xl border p-2 md:rounded-3xl md:p-3 z-20">
+      <div className="relative h-full w-full md:w-96 rounded-2xl border p-2 md:rounded-3xl md:p-3 z-20">
         <GlowingEffect
           spread={40}
           glow={true}
@@ -52,7 +52,7 @@ const GridItem = ({ area, icon, title, description, href }: ContactItems) => {
 
 export default function ContactItems() {
   return (
-    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto px-4">
+    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto px-4">
       <GridItem
         area=""
         icon={<Mail className="h-6 w-6 text-neutral-400" />}

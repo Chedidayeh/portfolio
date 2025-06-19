@@ -11,12 +11,14 @@ import { IconType } from "react-icons/lib";
 import { LinkPreview } from "./ui/link-preview";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
+import { Github } from "lucide-react";
 
 interface Project {
   title: string;
-  image : string,
+  image: string,
   description: string;
-  link: string;
+  link?: string;
+  github? : string
   stack: {
     id: number;
     name: string;
@@ -32,13 +34,13 @@ interface HoverEffectContextType {
 }
 
 const HoverEffectContext = createContext<HoverEffectContextType>({
-  onCardClose: () => {},
+  onCardClose: () => { },
   currentIndex: -1,
 });
 
 export function Projects() {
   return (
-    <MotionConfig  transition={{ duration: 0.3, ease: "easeInOut" }}>
+    <MotionConfig transition={{ duration: 0.3, ease: "easeInOut" }}>
       <div id="projects" className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-52 mt-20 sm:mt-28 md:mt-36 flex flex-col justify-center items-center mb-6 sm:mb-10">
         <h2 className="bg-clip-text text-transparent text-start bg-gradient-to-b from-neutral-600 to-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-sans relative z-20 font-bold tracking-tight">
           <Cover>My Projects</Cover>
@@ -174,13 +176,23 @@ const CardWithPopover = ({
                   <AnimatedTooltip items={item.stack} />
                 </div>
               </div>
-              <div className="flex items-center justify-center  my-4">
-                <MagicButton 
-                  title="Visit Project" 
-                  icon={<FaLocationArrow />} 
-                  position="right"
-                  handleClick={() => window.open(item.link, '_blank')}
-                />
+              <div className="flex items-center justify-center gap-2  my-4">
+                {item.github && (
+                  <MagicButton
+                    title="GitHub"
+                    icon={<Github className="w-5 h-5" />}
+                    position="right"
+                    handleClick={() => window.open(item.github, '_blank')}
+                  />
+                )}
+                {item.link && (
+                  <MagicButton
+                    title="Visit Project"
+                    icon={<FaLocationArrow />}
+                    position="right"
+                    handleClick={() => window.open(item.link, '_blank')}
+                  />
+                )}
               </div>
               {item.content && (
                 <div className="bg-neutral-800 p-4 sm:p-6 md:p-8 lg:p-14 rounded-2xl sm:rounded-3xl mb-4">
@@ -267,7 +279,7 @@ export const CardDescription = ({
 }) => {
   const text = children as string;
   const truncatedText = text.length > 100 ? `${text.slice(0, 100)}...` : text;
-  
+
   return (
     <p
       className={cn(

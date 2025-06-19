@@ -6,24 +6,16 @@ import { Cover } from "./ui/cover";
 
 export function Contact() {
   return (
-    <div id="contact" className="h-[40rem] w-full rounded-md  relative flex flex-col items-center justify-center antialiased">
-      <div className="max-w-7xl mx-auto space-y-8 p-4">
-      <div className="px-8 md:mt-36 flex flex-col justify-center items-center">
-                    <h2 className="bg-clip-text text-transparent text-start bg-gradient-to-b  from-neutral-600 to-white text-2xl md:text-2xl lg:text-4xl font-sans  relative z-20 font-bold tracking-tight">
-                        <Cover>Contact</Cover>
-                    </h2>
-                    <p className="max-w-x1 text-[1rem] text-start mt-[20px] md:text-1g text-neutral-400">
-                        Feel free to reach out.
-                    </p>
-                </div>
-        <p></p>
-        {/* <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
-          Welcome to MailJet, the best transactional email service on the web.
-          We provide reliable, scalable, and customizable email solutions for
-          your business. Whether you&apos;re sending order confirmations,
-          password reset emails, or promotional campaigns, MailJet has got you
-          covered.
-        </p> */}
+    <div id="contact" className="min-h-[60vh] h-auto w-full rounded-md relative flex flex-col items-center justify-center antialiased py-12 sm:py-16 md:py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto space-y-8 p-4 w-full">
+        <div className="px-2 sm:px-4 md:mt-24 flex flex-col justify-center items-center text-center">
+          <h2 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-600 to-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans relative z-20 font-bold tracking-tight">
+            <Cover>Contact</Cover>
+          </h2>
+          <p className="max-w-xl text-base sm:text-lg md:text-xl mt-4 text-neutral-400">
+            Feel free to reach out.
+          </p>
+        </div>
         <ContactItems/>
       </div>
       <BackgroundBeams />

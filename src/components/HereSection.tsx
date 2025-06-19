@@ -4,6 +4,7 @@ import { Cover } from "@/components/ui/cover";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import Image from "next/image";
+import { BackgroundBeams } from './ui/background-beams';
 
 const HeroSection = () => {
 return (
@@ -40,7 +41,7 @@ return (
         quality={100}
         className="w-full max-h-[90vh] object-contain   rounded-3xl object-top bg-[#0d0d0e]" />
     </div>
-    
+
 
     <div className="w-[90%] mx-auto md:py-[30px] flex flex-col items-center z-2">
       
@@ -62,6 +63,7 @@ return (
 
     <ShootingStars className="z-[-1] " />
     <StarsBackground className="z-[-1] " />
+    <BackgroundBeams />
 
 
     
