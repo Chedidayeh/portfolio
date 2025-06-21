@@ -20,6 +20,15 @@ import { Briefcase, FileText, BarChart, PenTool, TrendingUp, Github } from 'luci
 
 
 
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs"
+
+
+
 const COVID19 = () => {
   return (
     <div className="bg-neutral-800  rounded-3xl mb-4">
@@ -50,15 +59,6 @@ const COVID19 = () => {
   );
 };
 
-
-
-
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
 
 
 
@@ -653,29 +653,6 @@ export const projects = [
     content: <AiCareerCoach />
   },
   {
-    title: "COVID-19 BI Project",
-    image: "/BI.jpg",
-    description:
-      "This BI project uses Elasticsearch and Kibana to visualize COVID-19 cases across five countries, sourced from Kaggle. A star-schema data warehouse with Dim_Country, Dim_Date, and Fact_COVID. With dates ensures data integrity. Dashboards show case distribution by country and age. Talend data loading errors were resolved for reliable insights.",
-    link: "",
-    github : "",
-    stack: [
-      {
-        id: 17,
-        name: "Elasticsearch",
-        designation: "Elasticsearch",
-        icon: SiElasticsearch, // Available in react-icons/si
-      },
-      {
-        id: 18,
-        name: "Kibana",
-        designation: "Kibana",
-        icon: SiKibana, // Available in react-icons/si
-      },
-    ],
-    content: <COVID19 />,
-  },
-  {
     title: "AestheticPro",
     image: "/aestheticProLogo.png",
     description:
@@ -717,6 +694,7 @@ export const projects = [
     content: <AestheticPro />,
 
   },
+
   {
     title: "SpringBoot Project",
     image: "",
@@ -803,6 +781,29 @@ export const projects = [
         icon: SiAxios, // Available in react-icons/si
       },
     ],
+  },
+  {
+    title: "COVID-19 BI Project",
+    image: "/BI.jpg",
+    description:
+      "This BI project uses Elasticsearch and Kibana to visualize COVID-19 cases across five countries, sourced from Kaggle. A star-schema data warehouse with Dim_Country, Dim_Date, and Fact_COVID. With dates ensures data integrity. Dashboards show case distribution by country and age. Talend data loading errors were resolved for reliable insights.",
+    link: "",
+    github : "",
+    stack: [
+      {
+        id: 17,
+        name: "Elasticsearch",
+        designation: "Elasticsearch",
+        icon: SiElasticsearch, // Available in react-icons/si
+      },
+      {
+        id: 18,
+        name: "Kibana",
+        designation: "Kibana",
+        icon: SiKibana, // Available in react-icons/si
+      },
+    ],
+    content: <COVID19 />,
   },
   {
     title: "Matrix Calculator SOAP Web Service",
