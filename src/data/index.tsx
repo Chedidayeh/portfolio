@@ -652,48 +652,48 @@ export const projects = [
     ],
     content: <AiCareerCoach />
   },
-  {
-    title: "AestheticPro",
-    image: "/aestheticProLogo.png",
-    description:
-      "Print-on-Demand E-commerce Platform: (Built with Next.js, TypeScript, and Prisma) Created multi-role dashboards for sellers, factories, and admins with real-time analytics and order management. Implemented dynamic product mockup generation and detailed seller performance tracking. Integrated Firebase Storage, PostgreSQL, affiliate marketing, and real-time notifications for engagement. Empowers Tunisian creators to launch brands with built-in social media and online store tools.",
-    link: "https://aestheticpro.vercel.app",
-    github : "",
-    stack: [
-      {
-        id: 1,
-        name: "NextJs",
-        designation: "NextJs",
-        icon: SiNextdotjs, // Already provided
-      },
-      {
-        id: 2,
-        name: "TypeScript",
-        designation: "TypeScript",
-        icon: SiTypescript, // Available in react-icons/si
-      },
-      {
-        id: 3,
-        name: "Prisma",
-        designation: "Prisma",
-        icon: SiPrisma, // Available in react-icons/si
-      },
-      {
-        id: 4,
-        name: "Firebase Storage",
-        designation: "Firebase Storage",
-        icon: SiFirebase, // Using Firebase icon as no specific Firebase Storage icon
-      },
-      {
-        id: 5,
-        name: "PostgreSQL",
-        designation: "PostgreSQL",
-        icon: SiPostgresql, // Available in react-icons/si
-      },
-    ],
-    content: <AestheticPro />,
+  // {
+  //   title: "AestheticPro",
+  //   image: "/aestheticProLogo.png",
+  //   description:
+  //     "Print-on-Demand E-commerce Platform: (Built with Next.js, TypeScript, and Prisma) Created multi-role dashboards for sellers, factories, and admins with real-time analytics and order management. Implemented dynamic product mockup generation and detailed seller performance tracking. Integrated Firebase Storage, PostgreSQL, affiliate marketing, and real-time notifications for engagement. Empowers Tunisian creators to launch brands with built-in social media and online store tools.",
+  //   link: "https://aestheticpro.vercel.app",
+  //   github : "",
+  //   stack: [
+  //     {
+  //       id: 1,
+  //       name: "NextJs",
+  //       designation: "NextJs",
+  //       icon: SiNextdotjs, // Already provided
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "TypeScript",
+  //       designation: "TypeScript",
+  //       icon: SiTypescript, // Available in react-icons/si
+  //     },
+  //     {
+  //       id: 3,
+  //       name: "Prisma",
+  //       designation: "Prisma",
+  //       icon: SiPrisma, // Available in react-icons/si
+  //     },
+  //     {
+  //       id: 4,
+  //       name: "Firebase Storage",
+  //       designation: "Firebase Storage",
+  //       icon: SiFirebase, // Using Firebase icon as no specific Firebase Storage icon
+  //     },
+  //     {
+  //       id: 5,
+  //       name: "PostgreSQL",
+  //       designation: "PostgreSQL",
+  //       icon: SiPostgresql, // Available in react-icons/si
+  //     },
+  //   ],
+  //   content: <AestheticPro />,
 
-  },
+  // },
 
   {
     title: "SpringBoot Project",
