@@ -171,7 +171,7 @@ const CardWithPopover = ({
                 {item.description}
               </motion.p>
               <div className="">
-                <div className="flex flex-row items-start justify-start w-full">
+                <div className="grid grid-cols-5 md:flex  md:flex-row items-start justify-start w-full gap-2">
                   <AnimatedTooltip items={item.stack} />
                 </div>
               </div>

@@ -112,7 +112,7 @@ const AiCareerCoach = () => {
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="target">Target</TabsTrigger>
           </TabsList>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="core">
+          <TabsContent className="mt-20" value="core">
             <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🎯 Core Purpose</h3>
             <p className="text-sm sm:text-base mb-4">The app serves as an AI-powered career coach that helps users:</p>
             <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
@@ -139,7 +139,7 @@ const AiCareerCoach = () => {
             </ul>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="features">
+          <TabsContent className="mt-20" value="features">
             <div className='mx-auto max-w-6xl px-6 lg:px-8'>
               <div className='space-y-12'>
                 {features.map((feature, index) => (
@@ -169,7 +169,7 @@ const AiCareerCoach = () => {
             </div>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="technical">
+          <TabsContent className="mt-20" value="technical">
 
             <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🛠 Technical Architecture</h3>
 
@@ -242,7 +242,7 @@ const AiCareerCoach = () => {
             </ul>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="data">
+          <TabsContent className="mt-20" value="data">
             <h3 className="text-xl sm:text-2xl  text-center font-semibold mb-3 sm:mb-4">📊 Data Models</h3>
             <p className="text-sm sm:text-base mb-4">The application uses a well-structured database schema with models for:</p>
             <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
@@ -269,7 +269,7 @@ const AiCareerCoach = () => {
             </ul>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="user">
+          <TabsContent className="mt-20" value="user">
 
             <h3 className="text-xl text-center sm:text-2xl font-semibold mb-3 sm:mb-4">🎨 User Experience</h3>
 
@@ -318,7 +318,7 @@ const AiCareerCoach = () => {
             </ul>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="target">
+          <TabsContent className="mt-20" value="target">
             <h3 className="text-xl text-center sm:text-2xl font-semibold mb-3 sm:mb-4">🎯 Target Audience</h3>
             <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
               <li className="flex items-start gap-3 group">
@@ -392,7 +392,7 @@ const ScrapeFlow = () => {
 
       <div className="flex justify-center w-full">
         <Tabs className="w-full max-w-4xl" defaultValue="core">
-          <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap" >
+          <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap mb-10 md:mb-4" >
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="core">Core Purpose</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="features">Key Features</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Technical Teck</TabsTrigger>
@@ -401,7 +401,7 @@ const ScrapeFlow = () => {
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="target">Target</TabsTrigger>
           </TabsList>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="core">
+          <TabsContent className="mt-20" value="core">
             <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🎯 Core Purpose</h3>
             <p className="text-sm sm:text-base mb-4">The app serves as a no-code workflow automation platform that helps users:</p>
             <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
@@ -428,7 +428,7 @@ const ScrapeFlow = () => {
             </ul>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="features">
+          <TabsContent className="mt-20" value="features">
             <div className='mx-auto max-w-6xl px-6 lg:px-8'>
               <div className='space-y-12'>
                 {features.map((feature, index) => (
@@ -468,7 +468,7 @@ const ScrapeFlow = () => {
             </div>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="technical">
+          <TabsContent className="mt-20" value="technical">
             <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🛠 Technical Architecture</h3>
 
             <h4 className="text-lg sm:text-xl font-medium mb-2">Frontend Stack:</h4>
@@ -545,7 +545,7 @@ const ScrapeFlow = () => {
           </TabsContent>
 
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="data">
+          <TabsContent className="mt-20" value="data">
             <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">📊 Data Models</h3>
             <p className="text-sm sm:text-base mb-4">The application uses a well-structured database schema with models for:</p>
             <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
@@ -580,7 +580,7 @@ const ScrapeFlow = () => {
             </ul>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="user">
+          <TabsContent className="mt-20" value="user">
             <h3 className="text-xl text-center sm:text-2xl font-semibold mb-3 sm:mb-4">🎨 User Experience</h3>
 
             <h4 className="text-lg sm:text-xl font-medium mb-2">Landing Page Features:</h4>
@@ -628,7 +628,7 @@ const ScrapeFlow = () => {
             </ul>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="target">
+          <TabsContent className="mt-20" value="target">
             <h3 className="text-xl text-center sm:text-2xl font-semibold mb-3 sm:mb-4">🎯 Target Audience</h3>
             <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
               <li className="flex items-start gap-3 group">
@@ -711,7 +711,7 @@ const AestheticPro = () => {
 
           </TabsList>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="overview">
+          <TabsContent className="mt-20" value="overview">
             <p className="text-sm sm:text-base mb-4">AestheticPro.tn is a Tunisian print-on-demand platform built with Next.js. It empowers users to create, customize, and sell their own designs on a variety of products. The platform serves three main user groups:</p>
             <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
               <li className="flex items-start gap-3 group">
@@ -729,7 +729,7 @@ const AestheticPro = () => {
             </ul>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="features">
+          <TabsContent className="mt-20" value="features">
             <div className='mx-auto max-w-6xl px-6 lg:px-8'>
               <div className='space-y-12'>
                 {features.map((feature, index) => (
@@ -759,7 +759,7 @@ const AestheticPro = () => {
             </div>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="technical">
+          <TabsContent className="mt-20" value="technical">
 
 
             <h4 className="text-lg sm:text-xl font-medium mb-2">Frontend Stack:</h4>
@@ -807,7 +807,7 @@ const AestheticPro = () => {
             </ul>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="points">
+          <TabsContent className="mt-20" value="points">
             <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
               <li className="flex items-start gap-3 group">
                 <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
@@ -829,7 +829,7 @@ const AestheticPro = () => {
             </ul>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="user">
+          <TabsContent className="mt-20" value="user">
 
 
             <h4 className="text-lg sm:text-xl font-medium mb-2">Landing Page Features:</h4>
@@ -877,7 +877,7 @@ const AestheticPro = () => {
             </ul>
           </TabsContent>
 
-          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="target">
+          <TabsContent className="mt-20" value="target">
             <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
               <li className="flex items-start gap-3 group">
                 <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
