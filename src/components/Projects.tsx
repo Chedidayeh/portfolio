@@ -15,7 +15,6 @@ import { Github } from "lucide-react";
 
 interface Project {
   title: string;
-  image: string,
   description: string;
   link?: string;
   github? : string

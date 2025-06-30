@@ -15,6 +15,7 @@ import {
   SiElasticsearch,
   SiKibana,
   SiClerk,
+  SiReact,
 } from "react-icons/si";
 import { Briefcase, FileText, BarChart, PenTool, TrendingUp, Github } from 'lucide-react';
 
@@ -139,33 +140,33 @@ const AiCareerCoach = () => {
           </TabsContent>
 
           <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="features">
-          <div className='mx-auto max-w-6xl px-6 lg:px-8'>
-        <div className='space-y-12'>
-          {features.map((feature, index) => (
-            <div key={index} className='flex flex-col space-y-12'>
-              <h3 className="text-2xl font-bold text-white text-center mb-4">{feature.title}</h3>
-              <div className='relative w-full h-[400px] overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
-                {feature.src.map((imgSrc, imgIdx) => (
-                  <img
-                    key={imgSrc + imgIdx}
-                    src={imgSrc}
-                    alt={feature.description}
-                    width={3000}
-                    height={3000}
-                    className='object-cover w-full h-full rounded-xl max-w-[400px] max-h-[400px]'
-                  />
+            <div className='mx-auto max-w-6xl px-6 lg:px-8'>
+              <div className='space-y-12'>
+                {features.map((feature, index) => (
+                  <div key={index} className='flex flex-col space-y-12'>
+                    <h3 className="text-2xl font-bold text-white text-center mb-4">{feature.title}</h3>
+                    <div className='relative w-full h-[400px] overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
+                      {feature.src.map((imgSrc, imgIdx) => (
+                        <img
+                          key={imgSrc + imgIdx}
+                          src={imgSrc}
+                          alt={feature.description}
+                          width={3000}
+                          height={3000}
+                          className='object-cover w-full h-full rounded-xl max-w-[400px] max-h-[400px]'
+                        />
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-center my-4">
+                      <p className='text-base font-medium text-center text-white leading-relaxed max-w-3xl'>
+                        {feature.description}
+                      </p>
+                    </div>
+                    <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
+                  </div>
                 ))}
               </div>
-              <div className="flex items-center justify-center my-4">
-                <p className='text-base font-medium text-center text-white leading-relaxed max-w-3xl'>
-                  {feature.description}
-                </p>
-              </div>
-              <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
             </div>
-          ))}
-        </div>
-      </div>
           </TabsContent>
 
           <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="technical">
@@ -267,7 +268,7 @@ const AiCareerCoach = () => {
               </li>
             </ul>
           </TabsContent>
-          
+
           <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="user">
 
             <h3 className="text-xl text-center sm:text-2xl font-semibold mb-3 sm:mb-4">🎨 User Experience</h3>
@@ -346,6 +347,316 @@ const AiCareerCoach = () => {
   );
 };
 
+const ScrapeFlow = () => {
+  const features = [
+    {
+      src: ["/scrapeflow1.png"],
+      title: "ScrapeFlow Home Dashboard",
+      description: "Get a quick overview of your scraping activities with real-time stats on workflow and phase executions, credits consumed, and visual graphs for daily success/failure rates, empowering efficient workflow management."
+    },
+    {
+      src: ["/scrapeflow3.png"],
+      video: "/scrapeflow7.mp4",
+      title: "Workflow Editor",
+      description: "Design and customize scraping workflows visually using a drag-and-drop interface with modular tasks like data extraction, user interactions, and result delivery, offering a code-free way to automate complex processes."
+    },
+    {
+      src: ["/scrapeflow5.png"],
+      video: "/scrapeflow6.mp4",
+      title: "Workflow Run Details",
+      description: "Track and analyze individual workflow runs with detailed status updates, including failure reasons like insufficient credits, phase-by-phase execution logs, and input/output data, ensuring precise monitoring and troubleshooting."
+    },
+    {
+      src: ["/scrapeflow4.png"],
+      title: "All Runs Overview",
+      description: "View a comprehensive log of all workflow runs, including status, credits used, and timestamps, allowing you to assess performance and optimize your scraping strategies effectively."
+    },
+    {
+      src: ["/scrapeflow2.png"],
+      title: "Billing Section",
+      description: "Monitor your credit balance and purchase flexible credit packs (e.g., Small, Medium, Large) to keep your workflows running smoothly, with clear warnings when credits are low."
+    },
+    {
+      src: ["/scrapeflow2.png"],
+      title: "Credentials Management",
+      description: "Securely manage and encrypt your credentials with an intuitive interface, ensuring sensitive data like login details are safely stored and easily accessible for workflow automation."
+    },
+  ];
+
+
+
+  return (
+    <div className="bg-neutral-800 rounded-3xl mb-4">
+
+      <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6">Full Stack AI Career Coach with Next JS, Neon DB, Tailwind, Prisma, Inngest, Shadcn UI</h1>
+
+      <div className="flex justify-center w-full">
+        <Tabs className="w-full max-w-4xl" defaultValue="core">
+          <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap" >
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="core">Core Purpose</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="features">Key Features</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Technical Teck</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="data">Data Models</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="user">UX</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="target">Target</TabsTrigger>
+          </TabsList>
+
+          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="core">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🎯 Core Purpose</h3>
+            <p className="text-sm sm:text-base mb-4">The app serves as a no-code workflow automation platform that helps users:</p>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Design complex web scraping workflows visually without coding</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Automate browser-based tasks like navigation, form filling, and data extraction</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Schedule and monitor workflow executions with detailed logs</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Leverage AI-powered data parsing for accurate extraction</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Manage credits and billing for seamless automation scaling</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="features">
+            <div className='mx-auto max-w-6xl px-6 lg:px-8'>
+              <div className='space-y-12'>
+                {features.map((feature, index) => (
+                  <div key={index} className='flex flex-col space-y-12'>
+                    <h3 className="text-2xl font-bold text-white text-center mb-4">{feature.title}</h3>
+                    <div className='relative w-full h-[400px] overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
+                      {feature.src.map((imgSrc, imgIdx) => (
+                        <img
+                          key={imgSrc + imgIdx}
+                          src={imgSrc}
+                          alt={feature.description}
+                          width={3000}
+                          height={3000}
+                          className='object-cover w-full h-full rounded-xl max-w-[400px] max-h-[400px]'
+                        />
+                      ))}
+                {feature.video && (
+               <div className="relative w-full max-w-[640px] mx-auto aspect-video bg-black rounded-xl shadow-lg flex items-center justify-center">
+               <video
+                 src={feature.video}
+                 controls
+                 poster={feature.src?.[0]} // Optional: show first image as poster
+                 className="object-contain w-full h-full rounded-xl"
+               />
+             </div>
+                      )}
+                    </div>
+                    <div className="flex items-center justify-center my-4">
+                      <p className='text-base font-medium text-center text-white leading-relaxed max-w-3xl'>
+                        {feature.description}
+                      </p>
+                    </div>
+                    <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="technical">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🛠 Technical Architecture</h3>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Frontend Stack:</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Next.js 15</strong> with App Router for modern React development</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>ReactFlow</strong> for visual workflow editor with drag-and-drop functionality</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>TypeScript</strong> for type safety</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Tailwind CSS</strong> for styling with custom UI components</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Radix UI</strong> for accessible component primitives</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Lucide React</strong> for icons</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Framer Motion</strong> for animations</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Backend & Database:</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Prisma ORM</strong> with SQLite database for lightweight data management</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Clerk</strong> for secure authentication and user management</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Puppeteer</strong> for browser automation and web scraping</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Next.js API Routes</strong> for server-side logic and workflow execution</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Key Dependencies:</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-yellow-400 to-orange-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Stripe</strong> for payment processing and credit purchases</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-yellow-400 to-orange-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Node-cron</strong> for scheduling workflow executions</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-yellow-400 to-orange-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Axios</strong> for handling HTTP requests and webhook delivery</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-yellow-400 to-orange-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Zod</strong> for schema validation and data integrity</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+
+          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="data">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">📊 Data Models</h3>
+            <p className="text-sm sm:text-base mb-4">The application uses a well-structured database schema with models for:</p>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Workflow</strong> (user-defined workflows with execution plans and schedules)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>WorkflowExecution</strong> (tracks execution details, status, and triggers)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>ExecutionPhase</strong> (individual phases of workflow execution with inputs/outputs)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>ExecutionLog</strong> (logs for each execution phase with timestamps and levels)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>UserBalance</strong> (manages user credits for workflow executions)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Credential</strong> (secure storage for user-specific credentials)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>UserPurchase</strong> (tracks user purchases and payment details)</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="user">
+            <h3 className="text-xl text-center sm:text-2xl font-semibold mb-3 sm:mb-4">🎨 User Experience</h3>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Landing Page Features:</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Modern hero section with animated gradient titles</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Feature showcase highlighting visual workflow editor and AI-powered extraction</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Statistics display (100+ task types, 10,000+ successful executions, 98% uptime)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Step-by-step "How It Works" guide for creating and scheduling workflows</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>User testimonials and FAQ section for web scraping and automation</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Dashboard Experience:</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Visual workflow editor for drag-and-drop automation design</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Real-time execution tracking with detailed logs and status updates</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Credit usage monitoring and billing history overview</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Secure credential management and onboarding for new users</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="target">
+            <h3 className="text-xl text-center sm:text-2xl font-semibold mb-3 sm:mb-4">🎯 Target Audience</h3>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Data analysts automating web scraping tasks</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Businesses needing scheduled data extraction and reporting</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Developers building custom automation workflows</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Non-technical users seeking no-code web scraping solutions</span>
+              </li>
+            </ul>
+          </TabsContent>
+        </Tabs>
+      </div>
+
+    </div>
+
+  );
+};
+
 
 const AestheticPro = () => {
   const features = [
@@ -389,7 +700,7 @@ const AestheticPro = () => {
     <div className="bg-neutral-800 rounded-3xl mb-4">
 
 
-<div className="flex justify-center w-full">
+      <div className="flex justify-center w-full">
         <Tabs className="w-full max-w-4xl" defaultValue="overview">
           <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap" >
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="overview">Overview</TabsTrigger>
@@ -419,33 +730,33 @@ const AestheticPro = () => {
           </TabsContent>
 
           <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="features">
-          <div className='mx-auto max-w-6xl px-6 lg:px-8'>
-        <div className='space-y-12'>
-          {features.map((feature, index) => (
-            <div key={index} className='flex flex-col space-y-12'>
-              <h3 className="text-2xl font-bold text-white text-center mb-4">{feature.title}</h3>
-              <div className='relative w-full h-[400px] overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
-                {feature.src.map((imgSrc, imgIdx) => (
-                  <img
-                    key={imgSrc + imgIdx}
-                    src={imgSrc}
-                    alt={feature.description}
-                    width={3000}
-                    height={3000}
-                    className='object-cover w-full h-full rounded-xl max-w-[400px] max-h-[400px]'
-                  />
+            <div className='mx-auto max-w-6xl px-6 lg:px-8'>
+              <div className='space-y-12'>
+                {features.map((feature, index) => (
+                  <div key={index} className='flex flex-col space-y-12'>
+                    <h3 className="text-2xl font-bold text-white text-center mb-4">{feature.title}</h3>
+                    <div className='relative w-full h-[400px] overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
+                      {feature.src.map((imgSrc, imgIdx) => (
+                        <img
+                          key={imgSrc + imgIdx}
+                          src={imgSrc}
+                          alt={feature.description}
+                          width={3000}
+                          height={3000}
+                          className='object-cover w-full h-full rounded-xl max-w-[400px] max-h-[400px]'
+                        />
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-center my-4">
+                      <p className='text-base font-medium text-center text-white leading-relaxed max-w-3xl'>
+                        {feature.description}
+                      </p>
+                    </div>
+                    <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
+                  </div>
                 ))}
               </div>
-              <div className="flex items-center justify-center my-4">
-                <p className='text-base font-medium text-center text-white leading-relaxed max-w-3xl'>
-                  {feature.description}
-                </p>
-              </div>
-              <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
             </div>
-          ))}
-        </div>
-      </div>
           </TabsContent>
 
           <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="technical">
@@ -517,7 +828,7 @@ const AestheticPro = () => {
 
             </ul>
           </TabsContent>
-          
+
           <TabsContent className="mt-8 sm:mt-10 md:mt-12" value="user">
 
 
@@ -607,11 +918,62 @@ const AestheticPro = () => {
 
 export const projects = [
   {
+    title: "Scrape Flow",
+    description: "ScrapeFlow is a modern, extensible workflow automation platform designed for browser-based web scraping, data extraction, and automation tasks. Built with Next.js, Prisma, and Puppeteer, it empowers users to visually design, schedule, and execute complex scraping workflows without writing code.",
+    link: "",
+    github: "",
+    stack: [
+      {
+        id: 1,
+        name: "Next.js",
+        designation: "Frontend Framework",
+        icon: SiNextdotjs // react-icons/si: Next.js icon
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        designation: "Programming Language",
+        icon: SiTypescript // react-icons/si: TypeScript icon
+      },
+      {
+        id: 3,
+        name: "Tailwind CSS",
+        designation: "CSS Framework",
+        icon: SiTailwindcss // react-icons/si: Tailwind CSS icon
+      },
+      {
+        id: 4,
+        name: "Prisma",
+        designation: "ORM",
+        icon: SiPrisma // react-icons/si: Prisma icon
+      },
+      {
+        id: 5,
+        name: "PostgreSQL",
+        designation: "Database",
+        icon: SiPostgresql // react-icons/si: PostgreSQL icon
+      },
+      {
+        id: 6,
+        name: "Clerk",
+        designation: "Authentication",
+        icon: SiClerk // react-icons/si: Clerk icon (assumed, may need verification)
+      },
+      {
+        id: 7,
+        name: "React Flow",
+        designation: "Graph Flow",
+        icon: SiReact // react-icons/si: Clerk icon (assumed, may need verification)
+      }
+    ],
+    content: <ScrapeFlow />
+  },
+  {
     title: "AI Career Coach",
     image: "/téléchargement.png", // Placeholder; no specific image provided
     description: "A comprehensive career development platform leveraging AI to provide personalized job interview preparation, ATS-optimized resume building, tailored cover letter generation, and real-time industry insights for job seekers and professionals.",
     link: "https://ai-career-coach-pied.vercel.app/",
-    github : "https://github.com/Chedidayeh/ai-career-coach",
+    github: "https://github.com/Chedidayeh/ai-career-coach",
     stack: [
       {
         id: 1,
@@ -652,56 +1014,54 @@ export const projects = [
     ],
     content: <AiCareerCoach />
   },
-  // {
-  //   title: "AestheticPro",
-  //   image: "/aestheticProLogo.png",
-  //   description:
-  //     "Print-on-Demand E-commerce Platform: (Built with Next.js, TypeScript, and Prisma) Created multi-role dashboards for sellers, factories, and admins with real-time analytics and order management. Implemented dynamic product mockup generation and detailed seller performance tracking. Integrated Firebase Storage, PostgreSQL, affiliate marketing, and real-time notifications for engagement. Empowers Tunisian creators to launch brands with built-in social media and online store tools.",
-  //   link: "https://aestheticpro.vercel.app",
-  //   github : "",
-  //   stack: [
-  //     {
-  //       id: 1,
-  //       name: "NextJs",
-  //       designation: "NextJs",
-  //       icon: SiNextdotjs, // Already provided
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "TypeScript",
-  //       designation: "TypeScript",
-  //       icon: SiTypescript, // Available in react-icons/si
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Prisma",
-  //       designation: "Prisma",
-  //       icon: SiPrisma, // Available in react-icons/si
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Firebase Storage",
-  //       designation: "Firebase Storage",
-  //       icon: SiFirebase, // Using Firebase icon as no specific Firebase Storage icon
-  //     },
-  //     {
-  //       id: 5,
-  //       name: "PostgreSQL",
-  //       designation: "PostgreSQL",
-  //       icon: SiPostgresql, // Available in react-icons/si
-  //     },
-  //   ],
-  //   content: <AestheticPro />,
+  {
+    title: "AestheticPro",
+    description:
+      "Print-on-Demand E-commerce Platform: (Built with Next.js, TypeScript, and Prisma) Created multi-role dashboards for sellers, factories, and admins with real-time analytics and order management. Implemented dynamic product mockup generation and detailed seller performance tracking. Integrated Firebase Storage, PostgreSQL, affiliate marketing, and real-time notifications for engagement. Empowers Tunisian creators to launch brands with built-in social media and online store tools.",
+    link: "https://aestheticpro.vercel.app",
+    github : "",
+    stack: [
+      {
+        id: 1,
+        name: "NextJs",
+        designation: "NextJs",
+        icon: SiNextdotjs, // Already provided
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        designation: "TypeScript",
+        icon: SiTypescript, // Available in react-icons/si
+      },
+      {
+        id: 3,
+        name: "Prisma",
+        designation: "Prisma",
+        icon: SiPrisma, // Available in react-icons/si
+      },
+      {
+        id: 4,
+        name: "Firebase Storage",
+        designation: "Firebase Storage",
+        icon: SiFirebase, // Using Firebase icon as no specific Firebase Storage icon
+      },
+      {
+        id: 5,
+        name: "PostgreSQL",
+        designation: "PostgreSQL",
+        icon: SiPostgresql, // Available in react-icons/si
+      },
+    ],
+    content: <AestheticPro />,
 
-  // },
+  },
 
   {
     title: "SpringBoot Project",
-    image: "",
     description:
       "I built a full-stack flying agency web app using a Spring Boot backend with RESTful APIs and Spring Data JPA for MySQL database management via phpMyAdmin, and a Next.js frontend with React and TypeScript for a responsive, SEO-friendly interface. Features include flight search/booking, user authentication, booking management, and an admin dashboard, styled with Tailwind CSS and Shadcn/ui, using Axios for API calls.",
     link: "",
-    github : "https://github.com/Chedidayeh/SpringBoot-Project",
+    github: "https://github.com/Chedidayeh/SpringBoot-Project",
 
     stack: [
       {
@@ -744,11 +1104,10 @@ export const projects = [
   },
   {
     title: "ASP.NET Project",
-    image: "",
     description:
       "I developed a full-stack travel agency web app using an ASP.NET Core backend with RESTful APIs for managing flights, hotels, reservations, and destinations, integrated with a Next.js frontend built in React and TypeScript for a responsive, SEO-optimized interface with SSR and SSG. Key features include flight and hotel booking, reservation and destination management, real-time data, notifications, and an admin dashboard, styled with Tailwind CSS and Shadcn/ui, using Axios for API communication.",
     link: "",
-    github : "https://github.com/Chedidayeh/ASP.NET",
+    github: "https://github.com/Chedidayeh/ASP.NET",
     stack: [
       {
         id: 13,
@@ -784,11 +1143,10 @@ export const projects = [
   },
   {
     title: "COVID-19 BI Project",
-    image: "/BI.jpg",
     description:
       "This BI project uses Elasticsearch and Kibana to visualize COVID-19 cases across five countries, sourced from Kaggle. A star-schema data warehouse with Dim_Country, Dim_Date, and Fact_COVID. With dates ensures data integrity. Dashboards show case distribution by country and age. Talend data loading errors were resolved for reliable insights.",
     link: "",
-    github : "",
+    github: "",
     stack: [
       {
         id: 17,
@@ -807,11 +1165,10 @@ export const projects = [
   },
   {
     title: "Matrix Calculator SOAP Web Service",
-    image: "",
     description:
       "I developed a Java-based Matrix Calculator SOAP Web Service using JAX-WS to perform 2D matrix operations like addition and multiplication, exposed via a WSDL interface for SOAP requests. Managed with Maven and dependencies like JAX-WS and JAXB, it runs locally via Endpoint and is testable with SoapUI, offering a practical example of SOAP-based mathematical computations.",
     link: "",
-    github : "https://github.com/Chedidayeh/Matrix-Calculator-SOAP-Web-Service",
+    github: "https://github.com/Chedidayeh/Matrix-Calculator-SOAP-Web-Service",
     stack: [
     ],
   },
