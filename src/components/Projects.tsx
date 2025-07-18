@@ -17,7 +17,8 @@ interface Project {
   title: string;
   description: string;
   link?: string;
-  github? : string
+  github?: string
+  image?: string;
   stack: {
     id: number;
     name: string;
@@ -220,6 +221,16 @@ const CardWithPopover = ({
           )}
         </AnimatePresence>
         <Card>
+          <div className='relative w-full overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
+            <img
+              key={item.image}
+              src={item.image}
+              alt={item.title}
+              width={3000}
+              height={3000}
+              className='object-cover w-full h-full rounded-xl max-w-[400px] max-h-[400px]'
+            />
+          </div>
           <CardTitle className="text-xl sm:text-2xl">{item.title}</CardTitle>
           <CardDescription className="text-sm sm:text-base ">{item.description}</CardDescription>
           <div className="flex flex-row items-center justify-center mb-6 sm:mb-10 w-full mt-3 sm:mt-4">

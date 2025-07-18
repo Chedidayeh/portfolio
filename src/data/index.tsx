@@ -16,6 +16,10 @@ import {
   SiKibana,
   SiClerk,
   SiReact,
+  SiMongodb,
+  SiGoogle,
+  SiExpress,
+  SiAuth0,
 } from "react-icons/si";
 import { Briefcase, FileText, BarChart, PenTool, TrendingUp, Github } from 'lucide-react';
 
@@ -145,7 +149,7 @@ const AiCareerCoach = () => {
                 {features.map((feature, index) => (
                   <div key={index} className='flex flex-col space-y-12'>
                     <h3 className="text-2xl font-bold text-white text-center mb-4">{feature.title}</h3>
-                    <div className='relative w-full h-[400px] overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
+                    <div className='relative w-full overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
                       {feature.src.map((imgSrc, imgIdx) => (
                         <img
                           key={imgSrc + imgIdx}
@@ -153,7 +157,7 @@ const AiCareerCoach = () => {
                           alt={feature.description}
                           width={3000}
                           height={3000}
-                          className='object-cover w-full h-full rounded-xl max-w-[400px] max-h-[400px]'
+                          className='object-cover w-full h-full rounded-xl '
                         />
                       ))}
                     </div>
@@ -434,7 +438,7 @@ const ScrapeFlow = () => {
                 {features.map((feature, index) => (
                   <div key={index} className='flex flex-col space-y-12'>
                     <h3 className="text-2xl font-bold text-white text-center mb-4">{feature.title}</h3>
-                    <div className='relative w-full h-[400px] overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
+                    <div className='relative w-full overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
                       {feature.src.map((imgSrc, imgIdx) => (
                         <img
                           key={imgSrc + imgIdx}
@@ -442,7 +446,7 @@ const ScrapeFlow = () => {
                           alt={feature.description}
                           width={3000}
                           height={3000}
-                          className='object-cover w-full h-full rounded-xl max-w-[400px] max-h-[400px]'
+                          className='object-cover w-full h-full rounded-xl '
                         />
                       ))}
                 {feature.video && (
@@ -735,7 +739,7 @@ const AestheticPro = () => {
                 {features.map((feature, index) => (
                   <div key={index} className='flex flex-col space-y-12'>
                     <h3 className="text-2xl font-bold text-white text-center mb-4">{feature.title}</h3>
-                    <div className='relative w-full h-[400px] overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
+                    <div className='relative w-full overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
                       {feature.src.map((imgSrc, imgIdx) => (
                         <img
                           key={imgSrc + imgIdx}
@@ -743,7 +747,7 @@ const AestheticPro = () => {
                           alt={feature.description}
                           width={3000}
                           height={3000}
-                          className='object-cover w-full h-full rounded-xl max-w-[400px] max-h-[400px]'
+                          className='object-cover w-full h-full rounded-xl '
                         />
                       ))}
                     </div>
@@ -912,7 +916,177 @@ const AestheticPro = () => {
   );
 };
 
+const AItherapistAgent = () => {
+  const features = [
+    {
+      src: ["/AI Therapist Agent1.png"],
+      title: "Home Page",
+      description: "The home page is the first page users see when they visit the app. It serves as the entry point for users to explore the app's features and content."
+    },
+    {
+      src: ["/AI Therapist Agent2.png"],
+      title: "Dashboard",
+      description: "Dashboard that shows a personalized wellness hub where users can track mood, start therapy sessions, and access calming activities. It highlights key metrics like mood score, session count, and completion rate in a clean, dark-themed UI. The interface encourages consistent engagement by offering quick actions, daily overviews, and personalized insights once enough data is gathered."
+    },
+    {
+      src: ["/AI Therapist Agent3.png" , "/AI Therapist Agent4.png"],
+      title: "AI Therapist chat interface",
+      description: "The AI Therapist chat interface is a conversational AI system that provides users with personalized mental health support. It uses advanced natural language processing to understand user queries and provide relevant responses. The interface is designed to be intuitive and easy to use, with a clean, dark-themed UI that makes it feel like a real conversation."
+    },
+  ];
+  return (
+    <div className="bg-neutral-800 rounded-3xl mb-4">
+      <div className="flex justify-center w-full">
+        <Tabs className="w-full max-w-4xl" defaultValue="overview">
+          <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap" >
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="overview">Overview</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="features">Key Features</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Tech Stack</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="points">Points</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="target">Target Audience</TabsTrigger>
+          </TabsList>
 
+          <TabsContent className="mt-20" value="overview">
+            <p className="text-sm sm:text-base mb-4">
+              <strong>AI Therapist Agent App</strong> is a modern, interactive web application designed to support users in managing their mental health and well-being. Leveraging the power of AI, the app provides a safe space for users to track their moods, log activities, engage in therapeutic chat sessions, and access calming games and exercises. The platform aims to make mental health support more accessible, engaging, and personalized.
+            </p>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="features">
+            <div className='mx-auto max-w-6xl px-6 lg:px-8'>
+              <div className='space-y-12'>
+                {features.map((feature, index) => (
+                  <div key={index} className='flex flex-col space-y-12'>
+                    <h3 className="text-2xl font-bold text-white text-center mb-4">{feature.title}</h3>
+                    <div className='relative w-full overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
+                      {feature.src.map((imgSrc, imgIdx) => (
+                        <img
+                          key={imgSrc + imgIdx}
+                          src={imgSrc}
+                          alt={feature.description}
+                          width={3000}
+                          height={3000}
+                          className='object-cover w-full h-full rounded-xl '
+                        />
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-center my-4">
+                      <p className='text-base font-medium text-center text-white leading-relaxed max-w-3xl'>
+                        {feature.description}
+                      </p>
+                    </div>
+                    <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="technical">
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Frontend:</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Next.js</strong> (React framework)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>TypeScript</strong></span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Tailwind CSS</strong> (for styling)</span>
+              </li>
+            </ul>
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Backend:</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Node.js</strong> with <strong>Express</strong></span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>TypeScript</strong></span>
+              </li>
+            </ul>
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Database & AI:</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>MongoDB</strong></span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Google Gemini</strong> (AI integration)</span>
+              </li>
+            </ul>
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Authentication & State:</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>JWT</strong> (JSON Web Tokens) for secure API authentication</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>NextAuth.js</strong> for seamless authentication in Next.js</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Zustand</strong> (for state management)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Custom hooks and context for session and local storage management</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="points">
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Accessible & Private:</strong> Always-available, AI-powered mental health support in a secure, private environment.</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Personalized Experience:</strong> Mood tracking, activity logging, and analytics tailored to each user.</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Engaging & Calming:</strong> Interactive games and exercises to reduce anxiety and promote relaxation.</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Modern UI/UX:</strong> Clean, intuitive, and fully responsive design for all devices.</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="target">
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Individuals seeking accessible, AI-powered mental health support</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Users interested in tracking their mood and activities for self-improvement</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>People looking for guided relaxation, breathing exercises, and calming games</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Anyone who wants a private, always-available digital companion for mental wellness</span>
+              </li>
+            </ul>
+          </TabsContent>
+        </Tabs>
+      </div>
+    </div>
+  );
+};
 
 
 
@@ -922,6 +1096,7 @@ export const projects = [
     description: "ScrapeFlow is a modern, extensible workflow automation platform designed for browser-based web scraping, data extraction, and automation tasks. Built with Next.js, Prisma, and Puppeteer, it empowers users to visually design, schedule, and execute complex scraping workflows without writing code.",
     link: "",
     github: "",
+    image: "/ScrapeFlow1.png",
     stack: [
       {
         id: 1,
@@ -970,10 +1145,10 @@ export const projects = [
   },
   {
     title: "AI Career Coach",
-    image: "/téléchargement.png", // Placeholder; no specific image provided
     description: "A comprehensive career development platform leveraging AI to provide personalized job interview preparation, ATS-optimized resume building, tailored cover letter generation, and real-time industry insights for job seekers and professionals.",
     link: "https://ai-career-coach-pied.vercel.app/",
     github: "https://github.com/Chedidayeh/ai-career-coach",
+    image: "/AI Career Coach6.png",
     stack: [
       {
         id: 1,
@@ -1020,6 +1195,7 @@ export const projects = [
       "Print-on-Demand E-commerce Platform: (Built with Next.js, TypeScript, and Prisma) Created multi-role dashboards for sellers, factories, and admins with real-time analytics and order management. Implemented dynamic product mockup generation and detailed seller performance tracking. Integrated Firebase Storage, PostgreSQL, affiliate marketing, and real-time notifications for engagement. Empowers Tunisian creators to launch brands with built-in social media and online store tools.",
     link: "https://aestheticpro.vercel.app",
     github : "",
+    image: "/aestheticpro5.png",
     stack: [
       {
         id: 1,
@@ -1055,14 +1231,63 @@ export const projects = [
     content: <AestheticPro />,
 
   },
-
+  {
+    title: "AI Therapist Agent",
+    description: "AI Therapist Agent App is a modern, interactive web application designed to support users in managing their mental health and well-being. Leveraging the power of AI, the app provides a safe space for users to track their moods, log activities, engage in therapeutic chat sessions, and access calming games and exercises. The platform aims to make mental health support more accessible, engaging, and personalized.",
+    link: "",
+    image: "/AI Therapist Agent1.png",
+    stack: [
+      {
+        id: 7,
+        name: "Next.js",
+        designation: "Frontend Framework",
+        icon: SiNextdotjs, // Available in react-icons/si
+      },
+      {
+        id: 9,
+        name: "MongoDB",
+        designation: "Database",
+        icon: SiMongodb, // Available in react-icons/si
+      },
+      {
+        id: 10,
+        name: "GEMINI",
+        designation: "AI Model",
+        icon: SiGoogle, // Available in react-icons/si
+      },
+      {
+        id: 11,
+        name: "TypeScript",
+        designation: "TypeScript",
+        icon: SiTypescript, // Available in react-icons/si
+      },
+      {
+        id: 12,
+        name: "Tailwind CSS",
+        designation: "Tailwind CSS",
+        icon: SiTailwindcss, // Available in react-icons/si
+      },
+      {
+        id: 13,
+        name: "Express",
+        designation: "Backend Framework",
+        icon: SiExpress, // Available in react-icons/si
+      },
+      {
+        id: 14,
+        name: "Next Auth",
+        designation: "Authentication",
+        icon: SiAuth0, // Available in react-icons/si
+      },
+    ],
+    content: <AItherapistAgent />,
+  },
   {
     title: "SpringBoot Project",
     description:
       "I built a full-stack flying agency web app using a Spring Boot backend with RESTful APIs and Spring Data JPA for MySQL database management via phpMyAdmin, and a Next.js frontend with React and TypeScript for a responsive, SEO-friendly interface. Features include flight search/booking, user authentication, booking management, and an admin dashboard, styled with Tailwind CSS and Shadcn/ui, using Axios for API calls.",
     link: "",
-    github: "https://github.com/Chedidayeh/SpringBoot-Project",
-
+    image: "/SpringBoot.png",
     stack: [
       {
         id: 7,
@@ -1108,6 +1333,7 @@ export const projects = [
       "I developed a full-stack travel agency web app using an ASP.NET Core backend with RESTful APIs for managing flights, hotels, reservations, and destinations, integrated with a Next.js frontend built in React and TypeScript for a responsive, SEO-optimized interface with SSR and SSG. Key features include flight and hotel booking, reservation and destination management, real-time data, notifications, and an admin dashboard, styled with Tailwind CSS and Shadcn/ui, using Axios for API communication.",
     link: "",
     github: "https://github.com/Chedidayeh/ASP.NET",
+    image: "/ASP.NET.jpg",
     stack: [
       {
         id: 13,
@@ -1147,6 +1373,7 @@ export const projects = [
       "This BI project uses Elasticsearch and Kibana to visualize COVID-19 cases across five countries, sourced from Kaggle. A star-schema data warehouse with Dim_Country, Dim_Date, and Fact_COVID. With dates ensures data integrity. Dashboards show case distribution by country and age. Talend data loading errors were resolved for reliable insights.",
     link: "",
     github: "",
+    image: "/COVID-19.png",
     stack: [
       {
         id: 17,
@@ -1162,15 +1389,6 @@ export const projects = [
       },
     ],
     content: <COVID19 />,
-  },
-  {
-    title: "Matrix Calculator SOAP Web Service",
-    description:
-      "I developed a Java-based Matrix Calculator SOAP Web Service using JAX-WS to perform 2D matrix operations like addition and multiplication, exposed via a WSDL interface for SOAP requests. Managed with Maven and dependencies like JAX-WS and JAXB, it runs locally via Endpoint and is testable with SoapUI, offering a practical example of SOAP-based mathematical computations.",
-    link: "",
-    github: "https://github.com/Chedidayeh/Matrix-Calculator-SOAP-Web-Service",
-    stack: [
-    ],
   },
 ];
 
