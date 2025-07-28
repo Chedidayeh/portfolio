@@ -1096,7 +1096,7 @@ export const projects = [
     description: "ScrapeFlow is a modern, extensible workflow automation platform designed for browser-based web scraping, data extraction, and automation tasks. Built with Next.js, Prisma, and Puppeteer, it empowers users to visually design, schedule, and execute complex scraping workflows without writing code.",
     link: "",
     github: "",
-    image: "/ScrapeFlow1.png",
+    image: "/scrapeflow1.png",
     stack: [
       {
         id: 1,
