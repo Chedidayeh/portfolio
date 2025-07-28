@@ -44,7 +44,7 @@ export function Skills() {
         },
         {
             title: "Databases",
-            description: "Familiar with PostgreSQL, MongoDB, and Prisma ORM.",
+            description: "Familiar with NoSQL, SQL, MySQL, PostgreSQL, MongoDB, and Prisma ORM (neon,firebase and supabase integration).",
             icon: <IconDatabase />,
         },
         {
