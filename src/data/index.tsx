@@ -20,6 +20,8 @@ import {
   SiGoogle,
   SiExpress,
   SiAuth0,
+  SiPython,
+  SiModal,
 } from "react-icons/si";
 import { Briefcase, FileText, BarChart, PenTool, TrendingUp, Github } from 'lucide-react';
 
@@ -65,7 +67,429 @@ const COVID19 = () => {
 };
 
 
+const AI_Powered_Music_Generation_SaaS = () => {
+  const features = [
+    {
+      src: ["/AI Music Gen1.png"],
+      title: "Discover Screen",
+      description: "The Discover Screen features a Trending section that highlights popular tracks like '80s synth-pop' and 'Calm song Instrumental,' each accompanied by appealing images and listen/like counts to reflect their popularity, such as 1 listen and 0 likes, fostering user engagement. Navigation is seamless with quick access to 'Home' and 'Create' sections via the sidebar, making it easy for users to explore and enjoy a variety of generated music."
+    },
+    {
+      src: ["/AI Music Gen2.png"],
+      title: "Processing Screen",
+      description: "The Processing Screen keeps users informed with a clear 'Processing song...' message, indicating when a song is being generated, and includes a Refresh option to check the status, ensuring transparency during the creation process. It also displays the previously generated track, such as 'Calm song Instrumental,' with an Unpublish option, while retaining the user’s original song description for reference, providing a cohesive experience as the app works on the new track."
+    },
+    {
+      src: ["/AI Music Gen3.png"],
+      title: "Playback Screen",
+      description: "The Playback Screen showcases the generated track, such as 'Summer beach vibe music,' complete with a progress bar and intuitive playback controls, while also displaying the creator's name and email, like 'dayeh chedi, dayehchadi56@gmail.com,' for proper attribution. This screen enhances user interaction by offering simple Publish and Unpublish buttons, enabling creators to share their work or keep it private with ease."
+    },
+    {
+      src: ["/AI Music Gen4.png"],
+      title: "Create Screen",
+      description: "The Create Screen of the music generation app offers a highly customizable experience, allowing users to input a detailed song description like 'A dreamy lo-fi hip hop song, perfect for studying or relaxing' to shape the generated music, while also providing the option to add custom lyrics or use the auto-write feature for automated lyric creation, complemented by an instrumental toggle for easy on/off control. Users can enhance their creations by generating two songs with different styles using the Generate Variations feature, and draw inspiration from style tags such as 80s synth-pop or summer beach vibe, all conveniently accessible before hitting the prominent Create button to start the music generation process."
+    },
+  ];
 
+
+
+  return (
+    <div className="bg-neutral-800 rounded-3xl mb-4">
+
+      <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6">AI-Powered Music Generation SaaS with Next JS, Modal, Supabase, Tailwind, Python</h1>
+
+      <div className="flex justify-center w-full">
+        <Tabs className="w-full max-w-4xl" defaultValue="core">
+          <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap mb-10 md:mb-4" >
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="core">Core Purpose</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="features">Key Features</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Technical Teck</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="flow">Flow Overview</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="appfeatures">App Features</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="data">Data Models</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="user">UX</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="target">Target</TabsTrigger>
+          </TabsList>
+
+          <TabsContent className="mt-20" value="core">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🎯 Core Purpose</h3>
+            <p className="text-sm sm:text-base mb-4">Build an AI-powered music generation SaaS where users describe a track or provide lyrics/styles, and the system generates:</p>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🎵 A full song using ACE-Step with optional lyric alignment</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🖼 An album-cover thumbnail via SDXL Turbo</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🏷 Auto-categorization of the track using an LLM</span>
+              </li>
+            </ul>
+            <p className="text-sm sm:text-base">Provide a streamlined web experience to create, queue, monitor, play, publish, and download generated songs.</p>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="features">
+            <div className='mx-auto max-w-6xl px-6 lg:px-8'>
+              <div className='space-y-12'>
+                {features.map((feature, index) => (
+                  <div key={index} className='flex flex-col space-y-12'>
+                    <h3 className="text-2xl font-bold text-white text-center mb-4">{feature.title}</h3>
+                    <div className='relative w-full overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
+                      {feature.src.map((imgSrc, imgIdx) => (
+                        <img
+                          key={imgSrc + imgIdx}
+                          src={imgSrc}
+                          alt={feature.description}
+                          width={3000}
+                          height={3000}
+                          className='object-cover w-full h-full rounded-xl '
+                        />
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-center my-4">
+                      <p className='text-base font-medium text-center text-white leading-relaxed max-w-3xl'>
+                        {feature.description}
+                      </p>
+                    </div>
+                    <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="technical">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🛠 Technical Stack</h3>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Frontend</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Framework:</strong> Next.js 15 (App Router), React 19, TypeScript</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>UI:</strong> Tailwind CSS, Radix primitives, custom components under <code>src/components/ui</code></span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>State Management:</strong> Zustand (player store)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Auth:</strong> better-auth with Prisma adapter & custom tables</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Job Orchestration:</strong> Inngest (<code>src/inngest</code>)</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Backend (Model Serving)</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Modal serverless GPU app:</strong> <code>modal.App("music-generator")</code></span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>ACE-Step</strong> music pipeline</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Qwen2-7B-Instruct</strong> for prompt/lyrics/category generation</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>SDXL Turbo</strong> for thumbnail images</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>API:</strong> Pydantic-based request/response models, FastAPI-like endpoints via Modal</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Data & Storage</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-yellow-400 to-orange-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Database:</strong> PostgreSQL via Prisma</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-yellow-400 to-orange-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Storage:</strong> Supabase Storage (<code>music-bucket</code>) for audio & thumbnails</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="flow">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🔁 Flow Overview</h3>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>User Action:</strong> Creates a Song DB record & emits an Inngest event.</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Inngest Handler:</strong> Selects the appropriate Modal endpoint & sends a generation request.</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>
+                  <strong>Modal Worker:</strong>
+                  <ul className="ml-6 mt-2 space-y-2">
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" />
+                      <span>Runs ACE-Step to create audio</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" />
+                      <span>Runs SDXL Turbo to create image</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" />
+                      <span>Uses LLM to generate categories</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" />
+                      <span>Uploads assets to Supabase</span>
+                    </li>
+                  </ul>
+                </span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Backend:</strong> Returns storage paths & categories.</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Frontend:</strong> Updates Song record with URLs & connected category relations.</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="appfeatures">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">✨ App Features</h3>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>
+                  <strong>Text-to-music via ACE-Step</strong> with configurable parameters:
+                  <ul className="ml-6 mt-2 space-y-2">
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" />
+                      <span>Duration</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" />
+                      <span>Guidance scale</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" />
+                      <span>Steps</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" />
+                      <span>Seed</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" />
+                      <span>Instrumental toggle</span>
+                    </li>
+                  </ul>
+                </span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>
+                  <strong>Three generation modes:</strong>
+                  <ul className="ml-6 mt-2 space-y-2">
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" />
+                      <span>Full description only (auto-prompt + auto-lyrics if not instrumental)</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" />
+                      <span>Prompt + custom lyrics</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" />
+                      <span>Prompt + described lyrics (auto-lyrics from description)</span>
+                    </li>
+                  </ul>
+                </span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Automatic cover art generation (SDXL Turbo)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Automatic genre/category tagging (LLM)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Background job orchestration & status tracking (queued → processing → processed/failed)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>
+                  <strong>Personal library:</strong>
+                  <ul className="ml-6 mt-2 space-y-2">
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Search</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Play</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Publish/Unpublish</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Rename</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Download</span></li>
+                  </ul>
+                </span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Email + password authentication</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+
+          <TabsContent className="mt-20" value="data">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">📊 Data Models</h3>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>
+                  <strong>User</strong>
+                  <ul className="ml-6 mt-2 space-y-2">
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-400" /><span>Core profile info</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-400" /><span>Auth relationships (Session, Account)</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-400" /><span>Relations: songs, likes</span></li>
+                  </ul>
+                </span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>
+                  <strong>Song</strong>
+                  <ul className="ml-6 mt-2 space-y-2">
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-400" /><span>Fields: id, title, status (queued | processing | processed | failed), published</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-400" /><span>Input Params: instrumental, prompt, lyrics, fullDescribedSong, describedLyrics, guidanceScale, inferStep, audioDuration, seed</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-400" /><span>Output: audioPath, thumbnailPath</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-400" /><span>Relations: user (owner), categories, likes</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-400" /><span>Index: audioPath</span></li>
+                  </ul>
+                </span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>
+                  <strong>Category</strong>
+                  <ul className="ml-6 mt-2 space-y-2">
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-400" /><span>id, name (unique)</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-400" /><span>Many-to-many with Song (auto connectOrCreate on generation)</span></li>
+                  </ul>
+                </span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-400 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>
+                  <strong>Like</strong>
+                  <ul className="ml-6 mt-2 space-y-2">
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-400" /><span>Composite key: (userId, songId)</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-400" /><span>Relations: user, song</span></li>
+                  </ul>
+                </span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="user">
+            <h3 className="text-xl text-center sm:text-2xl font-semibold mb-3 sm:mb-4">🎨 User Experience</h3>
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Create Page (/create)</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>
+                  <strong>Simple Mode</strong>
+                  <ul className="ml-6 mt-2 space-y-2">
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>One text area to “Describe your song”</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Toggle: Instrumental</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Optional: “Generate Variations”</span></li>
+                  </ul>
+                </span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>
+                  <strong>Custom Mode</strong>
+                  <ul className="ml-6 mt-2 space-y-2">
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Lyrics: Write or Auto (describe lyrics)</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Toggle: Instrumental</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Optional: Variations</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Styles: Style tags input with quick-add chips</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>One-click Create: Queues 1–2 jobs (variations use different guidance scales)</span></li>
+                  </ul>
+                </span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Track List</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group"><span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" /><span>Live search</span></li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>
+                  Status-aware track entries:
+                  <ul className="ml-6 mt-2 space-y-2">
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Failed</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Queued/Processing (spinners)</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Ready</span></li>
+                  </ul>
+                </span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>
+                  Ready tracks:
+                  <ul className="ml-6 mt-2 space-y-2">
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Thumbnail (or placeholder)</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Quick Play</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Download</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Rename</span></li>
+                    <li className="flex items-start gap-3"><span className="mt-1 w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400" /><span>Publish/Unpublish</span></li>
+                  </ul>
+                </span>
+              </li>
+              <li className="flex items-start gap-3 group"><span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" /><span>Clicking a track loads it into the global player store for playback</span></li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="target">
+            <h3 className="text-xl text-center sm:text-2xl font-semibold mb-3 sm:mb-4">🎯 Target Audience</h3>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Creators, producers, hobbyists → Rapid ideation from descriptions or lyric ideas</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Content teams → On-demand royalty-free audio with auto-tagging & quick thumbnails</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Developers → Integrating generation via Modal endpoints & Supabase-backed assets</span>
+              </li>
+            </ul>
+          </TabsContent>
+        </Tabs>
+      </div>
+
+    </div>
+
+  );
+};
 
 
 
@@ -1091,6 +1515,46 @@ const AItherapistAgent = () => {
 
 
 export const projects = [
+  {
+    title: "AI-Powered Music Generation SaaS",
+    description: "An AI-powered music generation SaaS that uses LLMs to create full songs, cover art, and auto-tags from simple text descriptions or lyrics. Built with Next.js, Modal GPU pipelines, and Supabase for seamless creation, playback, and publishing.",
+    link: "https://music-gen-frontend-seven.vercel.app",
+    github: "",
+    image: "/AI Music Gen1.png",
+    stack: [
+      {
+        id: 1,
+        name: "Next.js",
+        designation: "Frontend Framework",
+        icon: SiNextdotjs // react-icons/si: Next.js icon
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        designation: "Programming Language",
+        icon: SiTypescript // react-icons/si: TypeScript icon
+      },
+      {
+        id: 3,
+        name: "Python",
+        designation: "Programming Language",
+        icon: SiPython 
+      },
+      {
+        id: 4,
+        name: "Modal",
+        designation: "AI Model",
+        icon: SiModal // react-icons/si: Prisma icon
+      },
+      {
+        id: 5,
+        name: "PostgreSQL",
+        designation: "Database",
+        icon: SiPostgresql // react-icons/si: PostgreSQL icon
+      },
+    ],
+    content: <AI_Powered_Music_Generation_SaaS />
+  },
   {
     title: "Scrape Flow",
     description: "ScrapeFlow is a modern, extensible workflow automation platform designed for browser-based web scraping, data extraction, and automation tasks. Built with Next.js, Prisma, and Puppeteer, it empowers users to visually design, schedule, and execute complex scraping workflows without writing code.",
