@@ -638,7 +638,7 @@ const SQLDataWarehouse = () => {
 const AiCareerCoach = () => {
   const features = [
     {
-      src: ["/téléchargement.png"],
+      src: ["/AI Career Coach6.png"],
       title: "AI-Powered Career Guidance",
       description: "Leverage Google's Generative AI to receive personalized career advice, industry-specific insights, and real-time market trends to guide your professional journey."
     },
