@@ -33,7 +33,7 @@ const Footer = () => {
           className="max-h-[80px] h-full object-contain object-center" />
       </a>
         </div>
-        <p>© 2025. Chadi Dayeh, Tunisia, Nabeul.</p>
+        <p>© {new Date().getFullYear()}. Chadi Dayeh, Tunisia, Nabeul.</p>
       </section>
     </footer>
   );

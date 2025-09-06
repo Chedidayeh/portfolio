@@ -80,7 +80,7 @@ export function Skills() {
     ];
     return (
         <>
-            <div id="skills" className="md:mt-[150px] flex flex-col ">
+            <div id="skills" className="md:mt-[150px] flex flex-col px-4 ">
 
                 <div className="px-8 md:mt-36 flex flex-col justify-center items-center">
                     <h2 className="bg-clip-text text-transparent text-start bg-gradient-to-b  from-neutral-600 to-white text-2xl md:text-2xl lg:text-4xl font-sans  relative z-20 font-bold tracking-tight">

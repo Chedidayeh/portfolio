@@ -23,8 +23,8 @@ import {
   SiPython,
   SiModal,
 } from "react-icons/si";
-import { Briefcase, FileText, BarChart, PenTool, TrendingUp, Github } from 'lucide-react';
 
+import { CircleSlash2, Database } from 'lucide-react';
 
 
 import {
@@ -103,7 +103,7 @@ const AI_Powered_Music_Generation_SaaS = () => {
           <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap mb-10 md:mb-4" >
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="core">Core Purpose</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="features">Key Features</TabsTrigger>
-            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Technical Teck</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Technical Stack</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="flow">Flow Overview</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="appfeatures">App Features</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="data">Data Models</TabsTrigger>
@@ -491,6 +491,148 @@ const AI_Powered_Music_Generation_SaaS = () => {
   );
 };
 
+const SQLDataWarehouse = () => {
+  const features = [
+    {
+      src: ["/SQL Data Warehouse1.png"],
+      title: "Data Architecture",
+      description: "The data architecture phase involves designing a modern data warehouse using SQL Server to consolidate sales data from multiple source systems, enabling analytical reporting and informed decision-making through Medallion Architecture implementation with Bronze, Silver, and Gold layers."
+    },
+    {
+      src: ["/SQL Data Warehouse2.png"],
+      title: "Data Flow",
+      description: "The data flow phase involves the movement of data from the source systems to the data warehouse. The data flow process ensures data consistency and completeness, enabling efficient data access and analysis."
+    },
+    {
+      src: ["/SQL Data Warehouse3.png"],
+      title: "Data Integration",
+      description: "The data integration phase involves combining data from different source systems into a single, user-friendly data model designed for analytical queries. The integration process ensures data consistency and completeness, enabling efficient data access and analysis."
+    },
+    {
+      src: ["/SQL Data Warehouse4.png"],
+      title: "Data Modeling",
+      description: "The data modeling phase involves creating a star schema optimized for analytical queries and reporting. The star schema design includes fact tables containing measurable business metrics and dimension tables providing descriptive context. The star schema design enables fast query performance and supports complex analytical operations for generating actionable business insights."
+    },
+    {
+      src: ["/SQL Data Warehouse5.png"],
+      title: "ETL",
+      description: "The ETL process involves extracting data from the source systems, transforming it to the desired format, and loading it into the data warehouse."
+    },
+  ];
+
+
+
+  return (
+    <div className="bg-neutral-800 rounded-3xl mb-4">
+
+      <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6">Data Warehouse and Analytics Project - SQL Server, ETL Pipelines, Star Schema</h1>
+
+      <div className="flex justify-center w-full">
+        <Tabs className="w-full max-w-4xl" defaultValue="core">
+          <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap mb-10 md:mb-4" >
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="core">Project Overview</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="features">Architecture Layers</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Technical architecture</TabsTrigger>
+          </TabsList>
+
+          <TabsContent className="mt-20" value="core">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🎯 Project Overview</h3>
+            <p className="text-sm sm:text-base mb-4">Develop a modern data warehouse using SQL Server to consolidate sales data from multiple source systems, enabling analytical reporting and informed decision-making through:</p>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🏗️ Medallion Architecture implementation with Bronze, Silver, and Gold layers</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>📊 Star schema data modeling for optimized analytical queries</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🔄 ETL pipelines for data extraction, transformation, and loading</span>
+              </li>
+            </ul>
+            <p className="text-sm sm:text-base">Deliver actionable insights into customer behavior, product performance, and sales trends through comprehensive SQL-based analytics and reporting.</p>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="features">
+            <div className='mx-auto max-w-6xl px-6 lg:px-8'>
+              <div className='space-y-12'>
+                {features.map((feature, index) => (
+                  <div key={index} className='flex flex-col space-y-12'>
+                    <h3 className="text-2xl font-bold text-white text-center mb-4">{feature.title}</h3>
+                    <div className='relative w-full overflow-hidden  bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
+                      {feature.src.map((imgSrc, imgIdx) => (
+                        <img
+                          key={imgSrc + imgIdx}
+                          src={imgSrc}
+                          alt={feature.description}
+                          width={3000}
+                          height={3000}
+                          className='object-cover w-full h-full rounded-xl '
+                        />
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-center my-4">
+                      <p className='text-base font-medium text-center text-white leading-relaxed max-w-3xl'>
+                        {feature.description}
+                      </p>
+                    </div>
+                    <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="technical">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">Technical architecture</h3>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Database & Data Warehouse</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Database Engine:</strong> Microsoft SQL Server for data warehouse storage</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Architecture:</strong> Medallion Architecture (Bronze, Silver, Gold layers)</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Data Modeling:</strong> Star schema with fact and dimension tables</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Indexing:</strong> Optimized indexes for analytical query performance</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">ETL & Data Processing</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Data Sources:</strong> ERP and CRM systems via CSV file imports</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Data Quality:</strong> cleansing, standardization, and validation processes</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span><strong>Transformation:</strong> SQL-based data transformation and business logic implementation</span>
+              </li>
+            </ul>
+
+          </TabsContent>
+
+        </Tabs>
+      </div>
+
+    </div>
+
+  );
+};
 
 
 const AiCareerCoach = () => {
@@ -534,7 +676,7 @@ const AiCareerCoach = () => {
           <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap" >
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="core">Core Purpose</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="features">Key Features</TabsTrigger>
-            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Technical Teck</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Technical Stack</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="data">Data Models</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="user">UX</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="target">Target</TabsTrigger>
@@ -823,7 +965,7 @@ const ScrapeFlow = () => {
           <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap mb-10 md:mb-4" >
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="core">Core Purpose</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="features">Key Features</TabsTrigger>
-            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Technical Teck</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Technical Stack</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="data">Data Models</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="user">UX</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="target">Target</TabsTrigger>
@@ -873,15 +1015,15 @@ const ScrapeFlow = () => {
                           className='object-cover w-full h-full rounded-xl '
                         />
                       ))}
-                {feature.video && (
-               <div className="relative w-full max-w-[640px] mx-auto aspect-video bg-black rounded-xl shadow-lg flex items-center justify-center">
-               <video
-                 src={feature.video}
-                 controls
-                 poster={feature.src?.[0]} // Optional: show first image as poster
-                 className="object-contain w-full h-full rounded-xl"
-               />
-             </div>
+                      {feature.video && (
+                        <div className="relative w-full max-w-[640px] mx-auto aspect-video bg-black rounded-xl shadow-lg flex items-center justify-center">
+                          <video
+                            src={feature.video}
+                            controls
+                            poster={feature.src?.[0]} // Optional: show first image as poster
+                            className="object-contain w-full h-full rounded-xl"
+                          />
+                        </div>
                       )}
                     </div>
                     <div className="flex items-center justify-center my-4">
@@ -1133,7 +1275,7 @@ const AestheticPro = () => {
           <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap" >
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="overview">Overview</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="features">Key Features</TabsTrigger>
-            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Technical Teck</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="technical">Technical Stack</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="points">Unique Selling Points</TabsTrigger>
             <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg " value="target">Target Audience</TabsTrigger>
 
@@ -1353,7 +1495,7 @@ const AItherapistAgent = () => {
       description: "Dashboard that shows a personalized wellness hub where users can track mood, start therapy sessions, and access calming activities. It highlights key metrics like mood score, session count, and completion rate in a clean, dark-themed UI. The interface encourages consistent engagement by offering quick actions, daily overviews, and personalized insights once enough data is gathered."
     },
     {
-      src: ["/AI Therapist Agent3.png" , "/AI Therapist Agent4.png"],
+      src: ["/AI Therapist Agent3.png", "/AI Therapist Agent4.png"],
       title: "AI Therapist chat interface",
       description: "The AI Therapist chat interface is a conversational AI system that provides users with personalized mental health support. It uses advanced natural language processing to understand user queries and provide relevant responses. The interface is designed to be intuitive and easy to use, with a clean, dark-themed UI that makes it feel like a real conversation."
     },
@@ -1514,7 +1656,20 @@ const AItherapistAgent = () => {
 
 
 
+
+
 export const projects = [
+  {
+    title: "SQL Data Warehouse Project",
+    description: "This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.",
+    link: "",
+    github: "https://github.com/Chedidayeh/sql-data-warehouse-project",
+    image: "/SQL Data Warehouse1.png",
+    stack: [
+
+    ],
+    content: <SQLDataWarehouse />
+  },
   {
     title: "AI-Powered Music Generation SaaS",
     description: "An AI-powered music generation SaaS that uses LLMs to create full songs, cover art, and auto-tags from simple text descriptions or lyrics. Built with Next.js, Modal GPU pipelines, and Supabase for seamless creation, playback, and publishing.",
@@ -1538,7 +1693,7 @@ export const projects = [
         id: 3,
         name: "Python",
         designation: "Programming Language",
-        icon: SiPython 
+        icon: SiPython
       },
       {
         id: 4,
@@ -1559,7 +1714,7 @@ export const projects = [
     title: "Scrape Flow",
     description: "ScrapeFlow is a modern, extensible workflow automation platform designed for browser-based web scraping, data extraction, and automation tasks. Built with Next.js, Prisma, and Puppeteer, it empowers users to visually design, schedule, and execute complex scraping workflows without writing code.",
     link: "",
-    github: "",
+    github: "https://github.com/Chedidayeh/ScrapeFlow",
     image: "/scrapeflow1.png",
     stack: [
       {
@@ -1658,7 +1813,7 @@ export const projects = [
     description:
       "Print-on-Demand E-commerce Platform: (Built with Next.js, TypeScript, and Prisma) Created multi-role dashboards for sellers, factories, and admins with real-time analytics and order management. Implemented dynamic product mockup generation and detailed seller performance tracking. Integrated Firebase Storage, PostgreSQL, affiliate marketing, and real-time notifications for engagement. Empowers Tunisian creators to launch brands with built-in social media and online store tools.",
     link: "https://aestheticpro.vercel.app",
-    github : "",
+    github: "",
     image: "/aestheticpro5.png",
     stack: [
       {
@@ -1698,7 +1853,7 @@ export const projects = [
   {
     title: "AI Therapist Agent",
     description: "AI Therapist Agent App is a modern, interactive web application designed to support users in managing their mental health and well-being. Leveraging the power of AI, the app provides a safe space for users to track their moods, log activities, engage in therapeutic chat sessions, and access calming games and exercises. The platform aims to make mental health support more accessible, engaging, and personalized.",
-    link: "",
+    github: "https://github.com/Chedidayeh/ai-therapist-agent",
     image: "/AI Therapist Agent1.png",
     stack: [
       {
@@ -1750,7 +1905,7 @@ export const projects = [
     title: "SpringBoot Project",
     description:
       "I built a full-stack flying agency web app using a Spring Boot backend with RESTful APIs and Spring Data JPA for MySQL database management via phpMyAdmin, and a Next.js frontend with React and TypeScript for a responsive, SEO-friendly interface. Features include flight search/booking, user authentication, booking management, and an admin dashboard, styled with Tailwind CSS and Shadcn/ui, using Axios for API calls.",
-    link: "",
+    github: "https://github.com/Chedidayeh/SpringBoot-Project",
     image: "/SpringBoot.png",
     stack: [
       {

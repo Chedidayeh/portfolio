@@ -71,7 +71,7 @@ return (
       About me
     </h2>
     <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-400 text-start mt-[20px]">
-    I'm a dedicated second-year Software Engineering student with a passion for developing innovative, high-quality software solutions. My academic journey has equipped me with a strong foundation inprogramming, system architecture, and system design.
+    I'm a dedicated third-year Software Engineering student with a passion for developing innovative, high-quality software solutions. My academic journey has equipped me with a strong foundation inprogramming, system architecture, and system design.
     </p>
 
 
