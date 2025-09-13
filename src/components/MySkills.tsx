@@ -34,7 +34,7 @@ export function Skills() {
         },
         {
             title: "Backend Development",
-            description: "Expertise in Nest.js, Express.js, ASP.NET, Spring Boot, FastAPI, and microservices architecture.",
+            description: "Expertise in Nest.js, Express.js, ASP.NET, Spring Boot, FastAPI, and microservices architecture. Experienced in building event-driven workflows using Inngest and implementing RAG systems with vector databases.",
             icon: <IconServer />,
         },
         {
@@ -44,12 +44,12 @@ export function Skills() {
         },
         {
             title: "Databases",
-            description: "Familiar with NoSQL, SQL, MySQL, PostgreSQL, MongoDB, and Prisma ORM (neon,firebase and supabase integration).",
+            description: "Familiar with NoSQL, SQL, MySQL, PostgreSQL, MongoDB, and Prisma ORM (Neon, Firebase, and Supabase integration). Experienced in managing vector databases for semantic search and AI-powered applications.",
             icon: <IconDatabase />,
         },
         {
             title: "Third-Party Integrations and APIs",
-            description: "Experience with REST API, GraphQL, Strapi, Headless CMS, Auth0, Firebase, and Vercel.",
+            description: "Experience with REST API, GraphQL, Strapi, Headless CMS, Auth0, Firebase, and Vercel. Skilled in using Gemini text-embedding-004 for creating vector embeddings.",
             icon: <IconPlug />,
         },
         {
@@ -78,6 +78,7 @@ export function Skills() {
             icon: <IconTool />,
         },
     ];
+    
     return (
         <>
             <div id="skills" className="md:mt-[150px] flex flex-col px-4 ">

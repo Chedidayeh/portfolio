@@ -22,6 +22,12 @@ import {
   SiAuth0,
   SiPython,
   SiModal,
+  SiShadcnui,
+  SiSecurityscorecard,
+  SiSupabase,
+  SiBackstage,
+  SiVectorworks,
+  SiIcloud,
 } from "react-icons/si";
 
 import { CircleSlash2, Database } from 'lucide-react';
@@ -62,6 +68,305 @@ const COVID19 = () => {
           <span className="font-semibold text-neutral-200">Vaccination Tracking:</span> Monitors global vaccination rates, including doses administered and coverage percentages.
         </li>
       </ul>
+    </div>
+  );
+};
+
+const AI_Meeting_Bot = () => {
+  const features = [
+    {
+      src: ["/meeting_bot1.png"],
+      title: "Landing Page",
+      description: "The Landing Page welcomes users with 'Transform Your Meetings with AI Magic' and highlights automatic summaries, action items, and insights. It includes a Dashboard button, no credit card required, quick setup, and a free forever plan, positioned as an AI-Powered Meeting Assistant."
+    },
+    {
+      src: ["/meeting_bot4.png"],
+      title: "Chat with AI",
+      description: "The Chat with AI screen allows users to ask questions about all their meetings, such as key decisions from recent product meetings, summarizing action items, or generating follow-up emails. It displays usage stats like 4/10 meetings and 2/30 chat messages, with an upgrade option to Pro for more capacity. The interface features a dark theme with suggested prompts for quick queries."
+    },
+    {
+      src: ["/meeting_bot3.png"],
+      title: "Integrations Screen",
+      description: "The Integrations screen shows connected tools like Google Calendar (auto-sync meetings) and Jira (create tickets for development tasks). It explains how to connect preferred tools, send action items during setup, and select tools to add tasks from dropdowns, enhancing workflow automation."
+    },
+ 
+    {
+      src: ["/meeting_bot2.png"],
+      title: "Past Meetings Dashboard",
+      description: "The Past Meetings dashboard lists completed meetings like Quarterly Performance Review, Q4 Product Roadmap Planning, and Strategic Hiring and Budget Planning, with details on dates, times, and 'View Details' buttons. Upcoming meetings show as empty with 'Your calendar is clear'."
+    },
+    {
+      src: ["/meeting_bot5.png"],
+      title: "Meeting Details Screen",
+      description: "The Meeting Details screen for a specific meeting, like Strategic Hiring and Budget Planning, includes summary, transcript tabs, action items with 'Add to Jira' buttons, and a Meeting Assistant chat for queries like deadlines or suggestions. It features audio playback controls and participant info."
+    },
+  ];
+
+  return (
+    <div className="bg-neutral-800 rounded-3xl mb-4">
+      <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6">AI Meeting Bot with Next.js 15, Gemini, Pinecone, Supabase, Tailwind CSS 4</h1>
+
+      <div className="flex justify-center w-full">
+        <Tabs className="w-full max-w-4xl" defaultValue="core">
+          <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap mb-10 md:mb-4">
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg" value="core">Core Purpose</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg" value="features">Key Features</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg" value="technical">Technical Stack</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg" value="appfeatures">App Features</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg" value="user">UX</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg" value="target">Target</TabsTrigger>
+          </TabsList>
+
+          <TabsContent className="mt-20" value="core">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🎯 Core Purpose</h3>
+            <p className="text-sm sm:text-base mb-4">MeetingBot is a comprehensive open-source meeting intelligence platform that automatically joins your video calls on Zoom, Google Meet, and Microsoft Teams to provide AI-powered transcriptions, summaries, and actionable insights. This project demonstrates how to build a SaaS platform with advanced AI integrations using Gemini and Pinecone for conversational meeting intelligence.</p>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🤖 Automatic AI bot deployment to video calls</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>📝 Meeting transcription with speaker identification</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🧠 AI-generated summaries and action items</span>
+              </li>
+            </ul>
+            <p className="text-sm sm:text-base">Provide real-time calendar sync, chat across meetings, and integrations for a complete alternative to commercial solutions.</p>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="features">
+            <div className='mx-auto max-w-6xl px-6 lg:px-8'>
+              <div className='space-y-12'>
+                {features.map((feature, index) => (
+                  <div key={index} className='flex flex-col space-y-12'>
+                    <h3 className="text-2xl font-bold text-white text-center mb-4">{feature.title}</h3>
+                    <div className='relative w-full overflow-hidden bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 flex flex-wrap items-center justify-center gap-4'>
+                      {feature.src.map((imgSrc, imgIdx) => (
+                        <img
+                          key={imgSrc + imgIdx}
+                          src={imgSrc}
+                          alt={feature.description}
+                          width={3000}
+                          height={3000}
+                          className='object-cover w-full h-full rounded-xl'
+                        />
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-center my-4">
+                      <p className='text-base font-medium text-center text-white leading-relaxed max-w-3xl'>
+                        {feature.description}
+                      </p>
+                    </div>
+                    <div className="mb-4 bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="technical">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🛠 Technical Stack</h3>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Frontend & UI</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Next.js 15, TypeScript, Tailwind CSS 4, Shadcn UI, React H5 Audio Player, Sonner, Next Themes</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Authentication & Security</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>NextAuth, Svix webhook validation</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Backend & Database</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-yellow-400 to-orange-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Prisma ORM, PostgreSQL, Inngest, Supabase Storage</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">AI & Data</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Gemini API (text-embedding-004 for embeddings), Pinecone Vector Database</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Integrations</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Google Calendar, Jira</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">State Management & Querying</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>React Context hooks, @tanstack/react-query</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="appfeatures">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">✨ App Features</h3>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🤖 Automatic AI bot deployment to Zoom, Google Meet, and Microsoft Teams</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>📝 Meeting transcription with speaker identification and diarization</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🧠 AI-generated meeting summaries and action items using Gemini</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>📅 Real-time calendar sync with Google Calendar</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>💬 Chat with meeting conversational AI via RAG pipeline powered by Pinecone vector database</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🔍 Semantic search across all meeting transcripts and summaries</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🗄️ Meeting embeddings maintained using Gemini text-embedding-004</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🔗 One-click action item sync to Jira</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🔒 Secure user authentication and session management with NextAuth</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🎨 Modern responsive UI built with Next.js 15, Tailwind CSS 4, and Shadcn UI</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>📊 Comprehensive meeting dashboard with audio playback using React H5 Audio Player</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>📋 Complete meeting history with clickable past meeting navigation</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>📅 Upcoming meetings dashboard with toggle controls for bot attendance</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>💭 Individual meeting chat interface for meeting-specific conversations</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🗨️ Global chat feature to query across all meetings simultaneously</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>⚙️ React Context hooks for efficient state management across components</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>☁️ Inngest functions for automated bot scheduling and background tasks</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🛡️ Enterprise-grade security with proper webhook validation using Svix</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🗄️ Supabase storage for audio files and user profile images</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🎯 Custom bot personalization with name changes and profile image uploads</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>📧 Post-meeting automated email notifications using Resend integration</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🗄️ Efficient database management with Prisma ORM</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🔔 Real-time notifications using Sonner toast system</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🌙 Dark theme support using Next Themes</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="user">
+            <h3 className="text-xl text-center sm:text-2xl font-semibold mb-3 sm:mb-4">🎨 User Experience</h3>
+            <p className="text-sm sm:text-base mb-4">MeetingBot offers an intuitive dark-themed interface with seamless navigation between home, integrations, settings, chat, and pricing.</p>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Chat interface with suggested prompts for quick insights</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Integrations page for easy tool connections and explanations</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Dashboard listing past and upcoming meetings with status indicators</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Detailed meeting views with summaries, action items, transcripts, and embedded chat</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Upgrade prompts integrated subtly for pro features</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="target">
+            <h3 className="text-xl text-center sm:text-2xl font-semibold mb-3 sm:mb-4">🎯 Target Audience</h3>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Business teams and professionals needing efficient meeting management and insights</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Developers building custom AI meeting solutions</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Enterprises seeking alternatives to Fireflies.ai and Otter.ai with open-source flexibility</span>
+              </li>
+            </ul>
+          </TabsContent>
+        </Tabs>
+      </div>
     </div>
   );
 };
@@ -1659,6 +1964,76 @@ const AItherapistAgent = () => {
 
 
 export const projects = [
+  {
+    title: "AI Meeting Bot App",
+    description: "MeetingBot is a comprehensive open-source meeting intelligence platform that automatically joins your video calls on Zoom, Google Meet, and Microsoft Teams to provide AI-powered transcriptions, summaries, and actionable insights. This project demonstrates how to build a SaaS platform with advanced AI integrations using Gemini and Pinecone for conversational meeting intelligence.",
+    link: "https://ai-meetingbot.vercel.app",
+    github: "https://github.com/Chedidayeh/meeting-bot",
+    image: "/meeting_bot1.png",
+    stack: [
+      {
+        id: 1,
+        name: "Next.js",
+        designation: "Full stack Framework",
+        icon: SiNextdotjs // react-icons/si: Next.js icon
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        designation: "Typed JavaScript",
+        icon: SiTypescript // react-icons/si: TypeScript icon
+      },
+      {
+        id: 3,
+        name: "Tailwind CSS",
+        designation: "Utility-first CSS Framework",
+        icon: SiTailwindcss // react-icons/si: Tailwind CSS icon
+      },
+      {
+        id: 4,
+        name: "Shadcn UI",
+        designation: "Component Library",
+        icon: SiShadcnui // react-icons/si: Shadcn UI icon (assumed, adjust if different)
+      },
+      {
+        id: 5,
+        name: "NextAuth",
+        designation: "Authentication",
+        icon: SiSecurityscorecard // react-icons/si: NextAuth icon (assumed, adjust if different)
+      },
+      {
+        id: 6,
+        name: "Prisma ORM",
+        designation: "Database ORM",
+        icon: SiPrisma // react-icons/si: Prisma icon
+      },
+      {
+        id: 7,
+        name: "Supabase",
+        designation: "Storage & Database",
+        icon: SiSupabase // react-icons/si: Supabase icon
+      },
+      {
+        id: 8,
+        name: "Inngest",
+        designation: "Job Orchestration",
+        icon: SiIcloud // react-icons/si: Inngest icon (assumed, adjust if different)
+      },
+      {
+        id: 9,
+        name: "Gemini API",
+        designation: "AI Model",
+        icon: SiGoogle // react-icons/si: Google icon (proxy for Gemini)
+      },
+      {
+        id: 10,
+        name: "Pinecone",
+        designation: "Vector Database",
+        icon: SiVectorworks // react-icons/si: Pinecone icon (assumed, adjust if different)
+      }
+    ],
+    content: <AI_Meeting_Bot />
+  },
   {
     title: "SQL Data Warehouse Project",
     description: "This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.",
