@@ -19,6 +19,7 @@ interface Project {
   link?: string;
   github?: string
   image?: string;
+  category?: string[];
   stack: {
     id: number;
     name: string;
@@ -38,7 +39,45 @@ const HoverEffectContext = createContext<HoverEffectContextType>({
   currentIndex: -1,
 });
 
+import { useRouter } from "next/navigation";
 export function Projects() {
+  const router = useRouter();
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
+  const [isFiltering, setIsFiltering] = useState<boolean>(false);
+
+  // Get all unique categories from projects, trimming whitespace
+  const allCategories = ["All", ...Array.from(new Set(projects.flatMap(project =>
+    project.category?.map(cat => cat.trim()) || []
+  )))];
+
+  useEffect(() => {
+    router.refresh();
+    
+    // Set filtering state and clear projects
+    setIsFiltering(true);
+    setFilteredProjects([]);
+    
+    // Use setTimeout to ensure the clear happens before the new filter
+    const timeoutId = setTimeout(() => {
+      if (selectedCategory === "All") {
+        setFilteredProjects(projects);
+      } else {
+        setFilteredProjects(
+          projects.filter(project =>
+            project.category?.some(cat => cat.trim() === selectedCategory)
+          )
+        );
+      }
+      setIsFiltering(false);
+    }, 50);
+
+    return () => clearTimeout(timeoutId);
+  }, [selectedCategory, projects]);
+
+
+
+
   return (
     <MotionConfig transition={{ duration: 0.3, ease: "easeInOut" }}>
       <div id="projects" className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-52 mt-20 sm:mt-28 md:mt-36 flex flex-col justify-center items-center mb-6 sm:mb-10">
@@ -48,9 +87,31 @@ export function Projects() {
         <p className="max-w-xl text-sm sm:text-base md:text-lg text-start mt-3 sm:mt-5 text-neutral-400">
           Check out the list of my projects
         </p>
+
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-6 sm:mt-8">
+          {allCategories.map((category) => (
+            <button
+              onClick={() => setSelectedCategory(category)}
+              key={category}
+              className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 ${selectedCategory === category
+                  ? "bg-white text-black"
+                  : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700 hover:text-white"
+                }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 ">
-        <HoverEffect items={projects} />
+        {isFiltering ? (
+          <div className="flex justify-center items-center py-20">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
+          </div>
+        ) : (
+          <HoverEffect items={filteredProjects} />
+        )}
       </div>
     </MotionConfig>
   );
@@ -174,7 +235,7 @@ const CardWithPopover = ({
               <div className="">
                 <div className="grid grid-cols-5 md:flex  md:flex-row items-start justify-start w-full gap-2">
                   {item.stack.length > 0 && (
-                  <AnimatedTooltip items={item.stack} />
+                    <AnimatedTooltip items={item.stack} />
                   )}
                 </div>
               </div>

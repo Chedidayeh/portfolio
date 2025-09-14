@@ -1970,6 +1970,7 @@ export const projects = [
     link: "https://ai-meetingbot.vercel.app",
     github: "https://github.com/Chedidayeh/meeting-bot",
     image: "/meeting_bot1.png",
+    category: ["AI", "SaaS", "Next.js"],
     stack: [
       {
         id: 1,
@@ -2040,6 +2041,7 @@ export const projects = [
     link: "",
     github: "https://github.com/Chedidayeh/sql-data-warehouse-project",
     image: "/SQL Data Warehouse1.png",
+    category: ["Data Warehousing", "Analytics", "SQL"],
     stack: [
 
     ],
@@ -2051,6 +2053,7 @@ export const projects = [
     link: "https://music-gen-frontend-seven.vercel.app",
     github: "",
     image: "/AI Music Gen1.png",
+    category: ["AI", "SaaS", "Music Generation", "Next.js"],
     stack: [
       {
         id: 1,
@@ -2091,6 +2094,7 @@ export const projects = [
     link: "",
     github: "https://github.com/Chedidayeh/ScrapeFlow",
     image: "/scrapeflow1.png",
+    category: ["AI", "SaaS", "Web Scraping", "Next.js"],
     stack: [
       {
         id: 1,
@@ -2143,6 +2147,7 @@ export const projects = [
     link: "https://ai-career-coach-pied.vercel.app/",
     github: "https://github.com/Chedidayeh/ai-career-coach",
     image: "/AI Career Coach6.png",
+    category: ["AI", "SaaS", "Career Development", "Next.js"],
     stack: [
       {
         id: 1,
@@ -2190,6 +2195,7 @@ export const projects = [
     link: "https://aestheticpro.vercel.app",
     github: "",
     image: "/aestheticpro5.png",
+    category: ["E-commerce", "SaaS", "Next.js"],
     stack: [
       {
         id: 1,
@@ -2230,6 +2236,7 @@ export const projects = [
     description: "AI Therapist Agent App is a modern, interactive web application designed to support users in managing their mental health and well-being. Leveraging the power of AI, the app provides a safe space for users to track their moods, log activities, engage in therapeutic chat sessions, and access calming games and exercises. The platform aims to make mental health support more accessible, engaging, and personalized.",
     github: "https://github.com/Chedidayeh/ai-therapist-agent",
     image: "/AI Therapist Agent1.png",
+    category: ["AI", "SaaS", "Next.js"],
     stack: [
       {
         id: 7,
@@ -2282,6 +2289,7 @@ export const projects = [
       "I built a full-stack flying agency web app using a Spring Boot backend with RESTful APIs and Spring Data JPA for MySQL database management via phpMyAdmin, and a Next.js frontend with React and TypeScript for a responsive, SEO-friendly interface. Features include flight search/booking, user authentication, booking management, and an admin dashboard, styled with Tailwind CSS and Shadcn/ui, using Axios for API calls.",
     github: "https://github.com/Chedidayeh/SpringBoot-Project",
     image: "/SpringBoot.png",
+    category: [ "Spring Boot"],
     stack: [
       {
         id: 7,
@@ -2328,6 +2336,7 @@ export const projects = [
     link: "",
     github: "https://github.com/Chedidayeh/ASP.NET",
     image: "/ASP.NET.jpg",
+    category: [ "ASP.NET"],
     stack: [
       {
         id: 13,
@@ -2368,6 +2377,7 @@ export const projects = [
     link: "",
     github: "",
     image: "/COVID-19.png",
+    category: ["Data Warehousing", "Analytics", "Elasticsearch"],
     stack: [
       {
         id: 17,
