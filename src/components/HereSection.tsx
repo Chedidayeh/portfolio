@@ -31,7 +31,7 @@ return (
           className="text-white border-b hover:rounded-xl  border-[#525252] hover:p-[10px] hover:bg-[#5070ff2f] transition-all ease-in-out mr-auto py-[10px] font-[600]">
             Contact Me →
             </a>
-            <div
+            {/* <div
           className="text-white cursor-pointer flex border-b hover:rounded-xl  border-[#525252] hover:p-[10px] hover:bg-[#5070ff2f] transition-all ease-in-out mr-auto py-[10px] font-[600]"
           onClick={() => {
             const link = document.createElement('a');
@@ -43,7 +43,7 @@ return (
           }}
         >
             Download my resume ↓
-            </div>
+            </div> */}
         </div>
 
       </div>
