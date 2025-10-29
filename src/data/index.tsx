@@ -28,6 +28,10 @@ import {
   SiBackstage,
   SiVectorworks,
   SiIcloud,
+  SiLangchain,
+  SiMlflow,
+  SiScikitlearn,
+  SiTensorflow,
 } from "react-icons/si";
 
 import { CircleSlash2, Database } from 'lucide-react';
@@ -362,6 +366,317 @@ const AI_Meeting_Bot = () => {
               <li className="flex items-start gap-3 group">
                 <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
                 <span>Enterprises seeking alternatives to Fireflies.ai and Otter.ai with open-source flexibility</span>
+              </li>
+            </ul>
+          </TabsContent>
+        </Tabs>
+      </div>
+    </div>
+  );
+};
+
+
+const ML_Air_Prediction = () => {
+  return (
+    <div className="bg-neutral-800 rounded-3xl mb-4">
+      <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6">🌍 Air Quality Analysis & Prediction</h1>
+
+      <div className="flex justify-center w-full">
+        <Tabs className="w-full max-w-4xl" defaultValue="core">
+          <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap mb-10 md:mb-4">
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg" value="core">Overview</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg" value="models">Models</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg" value="pipeline">Pipeline</TabsTrigger>
+          </TabsList>
+
+          <TabsContent className="mt-20" value="core">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">📋 Overview</h3>
+            <p className="text-sm sm:text-base mb-4">A complete machine learning pipeline for analyzing and predicting air quality (AQI) in Indian cities using multiple modeling approaches: regression, classification, and LSTM time-series forecasting.</p>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>� Data Processing: Load, clean, and preprocess air quality data</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>⚙️ Feature Engineering: Extract temporal features and encode categorical variables</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>� EDA: Visualize data distributions and relationships</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🤖 Modeling: Train 3 regression models, 1 classifier, and 1 LSTM forecaster</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>📊 Evaluation: Compare models and generate forecasts</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="models">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🧠 Models Implemented</h3>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Regression (Predict AQI values)</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Linear Regression</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Random Forest</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>LightGBM</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Best model selected by R² Score</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Classification (Predict AQI category)</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-orange-500 to-red-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Random Forest Classifier</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-orange-500 to-red-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Categories: Good → Moderate → Poor → Very Poor → Severe</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Time-Series (7-day forecast)</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-yellow-500 to-amber-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>LSTM Neural Network</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-yellow-500 to-amber-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>30-day lookback window</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-yellow-500 to-amber-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Generates multi-step forecasts</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">📈 Key Metrics</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-rose-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Regression: R² Score, RMSE, MAE</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-rose-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Classification: Accuracy, Precision, Recall, F1-Score</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-rose-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>LSTM: RMSE, MAE, R² Score</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+          <TabsContent className="mt-20" value="pipeline">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🔄 Pipeline Stages</h3>
+            <div className="overflow-x-auto mb-6">
+              <table className="w-full text-xs sm:text-sm border-collapse">
+                <thead>
+                  <tr className="bg-gray-700">
+                    <th className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Stage</th>
+                    <th className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Task</th>
+                    <th className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Output</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-300">
+                  <tr><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">1</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Download dataset from Kaggle</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Raw data</td></tr>
+                  <tr><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">2</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Clean data (handle missing values, outliers)</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Cleaned data</td></tr>
+                  <tr><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">3</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Extract temporal & encoded features</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Feature-rich data</td></tr>
+                  <tr><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">4</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Exploratory Data Analysis</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Visualizations</td></tr>
+                  <tr><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">5</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Prepare features for modeling</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Scaled train/test sets</td></tr>
+                  <tr><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">6A</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Train regression models</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Best model selected</td></tr>
+                  <tr><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">6B</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Train classification model</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Category predictions</td></tr>
+                  <tr><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">6C</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Train LSTM forecaster</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Time-series predictions</td></tr>
+                  <tr><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">7</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Compare all models</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Results & metrics</td></tr>
+                  <tr><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">8</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Save models</td><td className="border border-gray-600 px-2 py-2 sm:px-3 sm:py-2">Model artifacts</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">📦 Key Dependencies</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>pandas, numpy - Data manipulation</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>scikit-learn - ML models & preprocessing</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>lightgbm, xgboost - Gradient boosting</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>tensorflow - LSTM & deep learning</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>matplotlib, seaborn - Visualization</span>
+              </li>
+            </ul>
+          </TabsContent>
+        </Tabs>
+      </div>
+    </div>
+  );
+};
+
+
+const RAG_Chat = () => {
+  return (
+    <div className="bg-neutral-800 rounded-3xl mb-4">
+      <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6">🤖 RAG Chatbot - AI-Powered Document Intelligence</h1>
+
+      <div className="flex justify-center w-full">
+        <Tabs className="w-full max-w-4xl" defaultValue="core">
+          <TabsList className="justify-center w-full bg-transparent gap-2 sm:gap-4 md:gap-6 flex flex-wrap mb-10 md:mb-4">
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg" value="core">Core Purpose</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg" value="technical">Technical Stack</TabsTrigger>
+            <TabsTrigger className="border border-gray-600 px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 text-xs sm:text-sm md:text-base rounded-lg" value="target">Target</TabsTrigger>
+          </TabsList>
+
+          <TabsContent className="mt-20" value="core">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🎯 Core Purpose</h3>
+            <p className="text-sm sm:text-base mb-4">Intelligent PDF chatbot powered by Google Gemini + Pinecone Vector Database. Upload PDFs → Ask questions → Get AI-powered answers with sources.</p>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>📄 Upload PDFs → Ask questions → Get AI-powered answers with sources</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>🔍 Semantic Search → Find relevant information instantly</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>📊 Multiple Documents → search across collections</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-purple-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>💡 Smart Retrieval → AI finds the most relevant sections automatically</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+ 
+
+          <TabsContent className="mt-20" value="technical">
+            <h3 className="text-xl sm:text-2xl text-center font-semibold mb-3 sm:mb-4">🛠 Technology Stack</h3>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Frontend</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>React + TypeScript</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Backend</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-green-400 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Next.js</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Styling</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-yellow-400 to-orange-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Tailwind CSS</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">PDF Processing & RAG</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>LangChain + pdf-parse</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">AI & Embeddings</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>@langchain/google-genai</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">Vector Database</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-fuchsia-500 to-pink-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Pinecone Serverless</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">LLM</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-orange-500 to-red-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Google Gemini</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">File Storage</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Uploadthing</span>
+              </li>
+            </ul>
+
+            <h4 className="text-lg sm:text-xl font-medium mb-2">UI Components</h4>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-pink-500 to-purple-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>shadcn/ui</span>
+              </li>
+            </ul>
+          </TabsContent>
+
+
+
+   
+
+          <TabsContent className="mt-20" value="target">
+            <h3 className="text-xl text-center sm:text-2xl font-semibold mb-3 sm:mb-4">🎯 Target Audience</h3>
+            <ul className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-2xl shadow-lg p-6 mb-4 text-sm sm:text-base space-y-3 border border-gray-600">
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Students and researchers needing document intelligence</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Business professionals managing large document sets</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Developers building RAG applications</span>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <span className="mt-1 w-3 h-3 rounded-full bg-gradient-to-tr from-cyan-400 to-green-400 shadow-md group-hover:scale-110 transition-transform duration-200" />
+                <span>Enterprises seeking document search solutions</span>
               </li>
             </ul>
           </TabsContent>
@@ -1964,10 +2279,85 @@ const AItherapistAgent = () => {
 
 
 export const projects = [
+      {
+    title: "Air Quality Analysis & Prediction",
+    description: "Air quality analysis and prediction tool using advanced machine learning techniques.",
+    github: "https://github.com/Chedidayeh/Air_quality_predection_ML_project",
+    image: "/AirQuality.jpg",
+    category: ["ML", "Data Science", "Python"],
+    stack: [
+      {
+        id: 4,
+        name: "ML",
+        designation: "Machine Learning",
+        icon: SiMlflow // react-icons/si: MLflow icon
+      },
+      {
+        id: 2,
+        name: "Python",
+        designation: "Programming Language",
+        icon: SiPython // react-icons/si: Python icon
+      },
+      {
+        id: 9,
+        name: "Scikit-Learn",
+        designation: "Scikit-Learn Library",
+        icon: SiScikitlearn // react-icons/si: Scikit-Learn icon
+      },
+      {
+        id: 10,
+        name: "TensorFlow",
+        designation: "TensorFlow Library",
+        icon: SiTensorflow // react-icons/si: TensorFlow icon
+      }
+    ],
+    content: <ML_Air_Prediction />
+  },
+    {
+    title: "RAG Chatbot",
+    description: "Intelligent PDF chatbot powered by Google Gemini + Pinecone Vector Database",
+    link: "https://rag-chatbot-beta-seven.vercel.app",
+    github: "https://github.com/Chedidayeh/rag-chatbot",
+    image: "/RAG1.png",
+    category: ["AI", "SaaS", "Next.js" , "Langchain" , "RAG"],
+    stack: [
+      {
+        id: 1,
+        name: "Langchain",
+        designation: "AI Framework",
+        icon: SiLangchain // react-icons/si: Langchain icon
+      },
+      {
+        id: 4,
+        name: "Next.js",
+        designation: "Full stack Framework",
+        icon: SiNextdotjs // react-icons/si: Next.js icon
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        designation: "Typed JavaScript",
+        icon: SiTypescript // react-icons/si: TypeScript icon
+      },
+      {
+        id: 9,
+        name: "Gemini API",
+        designation: "AI Model",
+        icon: SiGoogle // react-icons/si: Google icon (proxy for Gemini)
+      },
+      {
+        id: 10,
+        name: "Pinecone",
+        designation: "Vector Database",
+        icon: SiVectorworks // react-icons/si: Pinecone icon (assumed, adjust if different)
+      }
+    ],
+    content: <RAG_Chat />
+  },
   {
     title: "AI Meeting Bot App",
     description: "MeetingBot is a comprehensive open-source meeting intelligence platform that automatically joins your video calls on Zoom, Google Meet, and Microsoft Teams to provide AI-powered transcriptions, summaries, and actionable insights. This project demonstrates how to build a SaaS platform with advanced AI integrations using Gemini and Pinecone for conversational meeting intelligence.",
-    link: "https://ai-meetingbot.vercel.app",
+    // link: "https://ai-meetingbot.vercel.app",
     github: "https://github.com/Chedidayeh/meeting-bot",
     image: "/meeting_bot1.png",
     category: ["AI", "SaaS", "Next.js"],
@@ -2051,7 +2441,7 @@ export const projects = [
     title: "AI-Powered Music Generation SaaS",
     description: "An AI-powered music generation SaaS that uses LLMs to create full songs, cover art, and auto-tags from simple text descriptions or lyrics. Built with Next.js, Modal GPU pipelines, and Supabase for seamless creation, playback, and publishing.",
     link: "https://music-gen-frontend-seven.vercel.app",
-    github: "",
+    github: "https://github.com/Chedidayeh/music-gen",
     image: "/AI Music Gen1.png",
     category: ["AI", "SaaS", "Music Generation", "Next.js"],
     stack: [

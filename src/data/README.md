@@ -1,92 +1,139 @@
+# 🌍 Air Quality Analysis & Prediction
 
-# Data Warehouse and Analytics Project
+A complete machine learning pipeline for analyzing and predicting air quality (AQI) in Indian cities using multiple modeling approaches: regression, classification, and LSTM time-series forecasting.
 
-Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+## 📋 Overview
 
----
-## 🏗️ Data Architecture
+This project implements an end-to-end data science workflow:
 
-The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
-![Data Architecture](docs/data_architecture.png)
+- **Data Processing**: Load, clean, and preprocess air quality data
+- **Feature Engineering**: Extract temporal features and encode categorical variables
+- **EDA**: Visualize data distributions and relationships
+- **Modeling**: Train 3 regression models, 1 classifier, and 1 LSTM forecaster
+- **Evaluation**: Compare models and generate forecasts
 
-1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
+## 🚀 Quick Start
 
----
-## 📖 Project Overview
+### Prerequisites
+- Python 3.8+
+- pip or conda
 
-This project involves:
+### Installation
 
-1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
-4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
-
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
-- SQL Development
-- Data Architect
-- Data Engineering  
-- ETL Pipeline Developer  
-- Data Modeling  
-- Data Analytics  
-
----
-
-## 🚀 Project Requirements
-
-### Building the Data Warehouse (Data Engineering)
-
-#### Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
-
-#### Specifications
-- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
-- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
-
----
-
-### BI: Analytics & Reporting (Data Analysis)
-
-#### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
-
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
-
-## 📂 Repository Structure
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd <project-directory>
 ```
-data-warehouse-project/
-│
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
-│
-├── docs/                               # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
-│
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
-│
-├── tests/                              # Test scripts and quality files
-│
-├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
+
+2. Create environment:
+```bash
+# Using pip
+pip install -r requirements.txt
+
+# Or using conda
+conda env create -f environment.yml
 ```
----
 
 
-## 🛡️ License
+### Run Pipeline
 
-This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+```bash
+python run_pipeline.py
+```
+
+This executes all 9 stages and generates:
+- Cleaned datasets
+- Trained models (in `models/`)
+
+## 📊 Project Structure
+
+```
+
+├── src/
+│   ├── data/         # Data loading & cleaning
+│   ├── features/     # Feature engineering
+│   ├── models/       # Model training & predictions
+│   │   ├── train_model.py        # Regression
+│   │   ├── predict_model.py      # Classification
+│   │   └── time_series_model.py  # LSTM forecasting
+│   └── visualization/  # EDA plots
+├── models/           # Saved model artifacts
+├── notebooks/        # Jupyter notebook
+├── requirements.txt  # Python dependencies
+└── run_pipeline.py   # Main execution script
+```
+
+## 🔄 Pipeline Stages
+
+| Stage | Task | Output |
+|-------|------|--------|
+| 1 | Download dataset from Kaggle | Raw data |
+| 2 | Clean data (handle missing values, outliers) | Cleaned data |
+| 3 | Extract temporal & encoded features | Feature-rich data |
+| 4 | Exploratory Data Analysis | Visualizations |
+| 5 | Prepare features for modeling | Scaled train/test sets |
+| 6A | Train regression models | Best model selected |
+| 6B | Train classification model | Category predictions |
+| 6C | Train LSTM forecaster | Time-series predictions |
+| 7 | Compare all models | Results & metrics |
+| 8 | Save models | Model artifacts |
+
+## 🧠 Models Implemented
+
+### Regression (Predict AQI values)
+- Linear Regression
+- Random Forest
+- LightGBM
+
+**Best model selected by R² Score**
+
+### Classification (Predict AQI category)
+- Random Forest Classifier
+- Categories: Good → Moderate → Poor → Very Poor → Severe
+
+### Time-Series (7-day forecast)
+- LSTM Neural Network
+- 30-day lookback window
+- Generates multi-step forecasts
+
+## 📈 Key Metrics
+
+- **Regression**: R² Score, RMSE, MAE
+- **Classification**: Accuracy, Precision, Recall, F1-Score
+- **LSTM**: RMSE, MAE, R² Score
+
+## 📦 Dependencies
+
+| Package | Purpose |
+|---------|---------|
+| pandas, numpy | Data manipulation |
+| scikit-learn | ML models & preprocessing |
+| lightgbm, xgboost | Gradient boosting |
+| tensorflow | LSTM & deep learning |
+| matplotlib, seaborn | Visualization |
+| kagglehub | Dataset download |
+| category_encoders | Categorical encoding |
+
+See `requirements.txt` for all versions.
+
+## 📁 Output Files
+
+After running the pipeline, you'll find:
+
+**Models** (in `models/`):
+- `best_regression_model.pkl`
+- `aqi_classifier_model.pkl`
+- `lstm_forecaster_*.h5`
+
+**Visualizations** (in `reports/figures/`):
+- AQI distribution
+- Correlation matrix
+- Feature importance
+- Time series plots
+- Confusion matrix
+- Model comparisons
+
+
+
+
