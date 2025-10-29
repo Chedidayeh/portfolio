@@ -2287,12 +2287,6 @@ export const projects = [
     category: ["ML", "Data Science", "Python"],
     stack: [
       {
-        id: 4,
-        name: "ML",
-        designation: "Machine Learning",
-        icon: SiMlflow // react-icons/si: MLflow icon
-      },
-      {
         id: 2,
         name: "Python",
         designation: "Programming Language",

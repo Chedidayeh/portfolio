@@ -22,24 +22,25 @@ export function Skills() {
             description: "Proficient in UML diagrams (use case, class, sequence, etc.) and BPMN diagrams.",
             icon: <IconLayout />,
         },
-        {
-            title: "Business Intelligence",
-            description: "Experience with ETL processes using SSIS and Talend, and multidimensional/tabular models with SSAS.",
-            icon: <IconChartBar />,
-        },
+
         {
             title: "Programming Languages",
             description: "Proficient in Java, JavaScript, C#, and Python.",
             icon: <IconCode />,
         },
         {
+            title: "Python Libraries & ML",
+            description: "Experienced with PyTorch, scikit-learn, NumPy, Pandas, Matplotlib, and Scikit-image for machine learning and data processing.",
+            icon: <IconCode />,
+        },
+        {
             title: "Backend Development",
-            description: "Expertise in Nest.js, Express.js, ASP.NET, Spring Boot, FastAPI, and microservices architecture. Experienced in building event-driven workflows using Inngest and implementing RAG systems with vector databases.",
+            description: "Expertise in Express.js, ASP.NET, Spring Boot, FastAPI, and microservices architecture. Experienced in building event-driven workflows using Inngest and implementing RAG systems with vector databases.",
             icon: <IconServer />,
         },
         {
             title: "Frontend Development",
-            description: "Skilled in Next.js, React, Angular, and tools like Zustand, Bootstrap, Redux, Shadcn/ui.",
+            description: "Skilled in Next.js, React, and tools like Zustand, Shadcn/ui, Aceternity UI.",
             icon: <IconBrowser />,
         },
         {
@@ -59,7 +60,7 @@ export function Skills() {
         },
         {
             title: "Quality Assurance and Testing",
-            description: "Skilled in Jest, JavaScript testing, Cypress, Selenium, Postman, and SoapUI for SOAP web services.",
+            description: "Skilled in Jest, JavaScript testing, Cypress, Selenium, Postman.",
             icon: <IconCheck />,
         },
         {
@@ -76,6 +77,11 @@ export function Skills() {
             title: "Other Tools",
             description: "Familiar with Node.js JavaScript runtime environment.",
             icon: <IconTool />,
+        },
+                {
+            title: "Business Intelligence",
+            description: "Experience with ETL processes using SSIS and Talend, and multidimensional/tabular models with SSAS.",
+            icon: <IconChartBar />,
         },
     ];
     
