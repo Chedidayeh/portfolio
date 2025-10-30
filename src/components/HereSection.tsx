@@ -27,10 +27,10 @@ return (
           Dayeh Chadi, <br /> Software <Cover>Engineer</Cover>.
         </h2>
         <div className='gap-2 flex flex-col'>
-        <a href="#contact"
+        {/* <a href="#contact"
           className="text-white border-b hover:rounded-xl  border-[#525252] hover:p-[10px] hover:bg-[#5070ff2f] transition-all ease-in-out mr-auto py-[10px] font-[600]">
             Contact Me →
-            </a>
+            </a> */}
             {/* <div
           className="text-white cursor-pointer flex border-b hover:rounded-xl  border-[#525252] hover:p-[10px] hover:bg-[#5070ff2f] transition-all ease-in-out mr-auto py-[10px] font-[600]"
           onClick={() => {

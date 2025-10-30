@@ -49,13 +49,13 @@ export function NavBar() {
       ),
       href: "#certifications",
     },
-    {
-      title: "Contact",
-      icon: (
-        <Mail className="h-full w-full  text-neutral-300" />
-      ),
-      href: "#contact",
-    },
+    // {
+    //   title: "Contact",
+    //   icon: (
+    //     <Mail className="h-full w-full  text-neutral-300" />
+    //   ),
+    //   href: "#contact",
+    // },
 
   ];
   return (
