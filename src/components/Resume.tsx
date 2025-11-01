@@ -60,7 +60,7 @@ export function Resume() {
               <Cover>+ Freelancing - Upwork</Cover>
             </h4>
             <span className="text-blue-500 my-2 sm:my-[10px] font-semibold block">
-              August 2024 - Today
+              January 2025 - Today
             </span>
             <p className="mb-4 sm:mb-8 text-xs sm:text-sm md:text-base font-semibold text-neutral-200">
               Work as a Full Stack Developer at Upwork
@@ -81,7 +81,7 @@ export function Resume() {
               <Cover>+ Summer internship at “After Code”</Cover>
             </h4>
             <span className="text-blue-500 my-2 sm:my-[10px] font-semibold block">
-              August 2024 - Today
+              June 2025 - July 2025
             </span>
             <p className="mb-4 sm:mb-8 text-xs sm:text-sm md:text-base font-semibold text-neutral-200">
               Developing a meeting intelligence platform that seamlessly joins
