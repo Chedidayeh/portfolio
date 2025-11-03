@@ -81,7 +81,7 @@ export const Card = ({
     <div
       className={cn(
         "rounded-xl sm:rounded-2xl w-full p-3 sm:p-4 overflow-hidden bg-black border border-white/[0.2] group-hover:border-slate-700 relative z-20",
-        isFewItems ? "h-[550px]" : "h-full", // 👈 fixed height when few items
+        isFewItems ? "h-[450px] md:h-[550px]" : "h-full", // 👈 fixed height when few items
         className
       )}
     >

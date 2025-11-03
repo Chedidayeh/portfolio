@@ -1,9 +1,22 @@
+"use client";
+
 import React from "react";
+import { motion } from "motion/react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { IconHome } from "@tabler/icons-react";
 import { Code2Icon, FolderCode, GraduationCap, Mail, Trophy } from "lucide-react";
 
 export function NavBar() {
+  const navVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
   const links = [
     {
       title: "Home",
@@ -59,11 +72,16 @@ export function NavBar() {
 
   ];
   return (
-    <div className="fixed left-[90%] translate-x-[-90%] md:left-[50%] md:translate-x-[-50%] top-[170px] md:top-[60px] z-[101] ">
+    <motion.div
+      className="fixed translate-x-[-90%] md:left-[40%] md:translate-x-[-50%] top-[170px] md:top-[60px] z-[101]"
+      variants={navVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <FloatingDock
         mobileClassName="translate-y-20" // only for demo, remove for production
         items={links}
       />
-    </div>
+    </motion.div>
   );
 }
