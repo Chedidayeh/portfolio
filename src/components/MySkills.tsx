@@ -87,15 +87,12 @@ export function Skills() {
     
     return (
         <>
-            <div id="skills" className="md:mt-[150px] flex flex-col px-4 ">
+            <div id="skills" className="mt-20 lg:mt-0 flex flex-col px-4 ">
 
                 <div className="px-8 md:mt-36 flex flex-col justify-center items-center">
                     <h2 className="bg-clip-text text-transparent text-start bg-gradient-to-b  from-neutral-600 to-white text-2xl md:text-2xl lg:text-4xl font-sans  relative z-20 font-bold tracking-tight">
                         <Cover>My Skills</Cover>
                     </h2>
-                    <p className="max-w-x1 text-[1rem] text-start mt-[20px] md:text-1g text-neutral-400">
-                        I provide the best tech
-                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 relative z-10 py-10 max-w-7xl mx-auto">

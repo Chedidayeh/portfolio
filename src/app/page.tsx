@@ -1,6 +1,7 @@
 import { Certifications } from "@/components/Certifications";
 import { Contact } from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import HeroSection from "@/components/HereSection";
 import { Skills } from "@/components/MySkills";
 import { NavBar } from "@/components/NavBar";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <>
     <NavBar/>
+    <Header/>
     <HeroSection/>
     <Skills/>
     <Resume/>

@@ -2,12 +2,11 @@
 import { animate, motion } from "motion/react";
 import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { SiNextdotjs, SiVercel, SiTailwindcss, SiReact, SiFirebase } from "react-icons/si";
+import { SiNextdotjs, SiVercel, SiTailwindcss, SiReact, SiFirebase, SiLangchain, SiPython, SiMlflow, SiTensorflow, SiPandas, SiTypescript } from "react-icons/si";
 
 export function Skills() {
   return (
-    <div className="flex flex-col mt-[100px] justify-start items-center ">
-      <h3 className="text-xl mb-[-50px] md:mb-[-100px] font-bold text-neutral-200 ">Skills</h3>
+    <div className="flex flex-col mt-2 justify-start items-center ">
       <CardSkeletonContainer>
         <Skeleton />
       </CardSkeletonContainer>
@@ -72,19 +71,19 @@ const Skeleton = () => {
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row shrink-0 justify-center items-center gap-2">
         <Container className="h-8 w-8 circle-1">
-          <SiVercel className="h-4 w-4 text-white" />
+          <SiTailwindcss className="h-4 w-4 text-white" />
         </Container>
         <Container className="h-12 w-12 circle-2">
-          <SiTailwindcss className="h-6 w-6 text-white" />
+          <SiTypescript className="h-6 w-6 text-white" />
         </Container>
         <Container className="circle-3">
         <SiNextdotjs className="h-8 w-8 text-white" />
         </Container>
         <Container className="h-12 w-12 circle-4">
-          <SiReact className="h-6 w-6 text-white" />
+          <SiPython className="h-6 w-6 text-white" />
         </Container>
         <Container className="h-8 w-8 circle-5">
-          <SiFirebase className="h-4 w-4 text-white" />
+          <SiLangchain className="h-4 w-4 text-white" />
         </Container>
       </div>
 
@@ -202,7 +201,7 @@ export const CardSkeletonContainer = ({
   return (
     <div
       className={cn(
-        "h-[15rem] md:h-[20rem] rounded-xl z-40",
+        "rounded-xl z-40",
         className,
         showGradient &&
           "bg-neutral-300 bg-[rgba(40,40,40,0.70)] [mask-image:radial-gradient(50%_50%_at_50%_50%,white_0%,transparent_100%)]"

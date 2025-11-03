@@ -84,9 +84,6 @@ export function Projects() {
         <h2 className="bg-clip-text text-transparent text-start bg-gradient-to-b from-neutral-600 to-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-sans relative z-20 font-bold tracking-tight">
           <Cover>My Projects</Cover>
         </h2>
-        <p className="max-w-xl text-sm sm:text-base md:text-lg text-start mt-3 sm:mt-5 text-neutral-400">
-          Check out the list of my projects
-        </p>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-6 sm:mt-8">

@@ -1,96 +1,79 @@
-"use client"
+"use client";
 
-import React from 'react'
+import React from "react";
 import { Skills } from "@/components/Skills";
 import { Cover } from "@/components/ui/cover";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import Image from "next/image";
-import { BackgroundBeams } from './ui/background-beams';
-import { FileDown } from 'lucide-react';
 
 const HeroSection = () => {
-return (
-    <div id="home" className="w-full overflow-x-hidden min-h-screen grid lg:grid-cols-[1fr_0.6fr_0.4fr] gap-[20px]">
-    
-    <div className="max-w-[600px] w-[90%] mx-auto py-[30px]">
-      <a href="/">
-        <Image
-          src="/images/logo.png"
-          alt="" width={120}
-          height={80}
-          className="max-h-[80px] h-full object-contain object-center" />
-      </a>
-
-      <div className="flex flex-col justify-center h-[80%]">
-        <h2 className="bg-clip-text text-transparent text-start bg-gradient-to-b  from-neutral-600 to-white text-2xl md:text-4xl lg:text-6xl font-sans py-2 md:py-10 relative z-20 font-bold tracking-tight">
-          Dayeh Chadi, <br /> Software <Cover>Engineer</Cover>.
+  return (
+    <div
+      id="home"
+      className="w-full grid grid-cols-1 min-h-screen lg:grid-cols-2 gap-8 lg:gap-16 items-center relative px-4 md:px-8"
+    >
+      {/* Left Column: Title + Skills */}
+      <div
+        className="w-full flex flex-col items-center lg:items-start justify-center gap-4 lg:gap-6 
+                      order-2 lg:order-1"
+      >
+        <h2 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-600 to-white text-4xl md:text-6xl font-sans py-2 font-bold tracking-tight text-center lg:text-left">
+          Dayeh Chadi, <br /> Software <Cover>Engineer</Cover>
         </h2>
-        <div className='gap-2 flex flex-col'>
-        {/* <a href="#contact"
-          className="text-white border-b hover:rounded-xl  border-[#525252] hover:p-[10px] hover:bg-[#5070ff2f] transition-all ease-in-out mr-auto py-[10px] font-[600]">
-            Contact Me →
-            </a> */}
-            {/* <div
-          className="text-white cursor-pointer flex border-b hover:rounded-xl  border-[#525252] hover:p-[10px] hover:bg-[#5070ff2f] transition-all ease-in-out mr-auto py-[10px] font-[600]"
-          onClick={() => {
-            const link = document.createElement('a');
-            link.href = '/resume.pdf';
-            link.download = 'Chedi_Dayeh_Resume.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-          }}
-        >
-            Download my resume ↓
-            </div> */}
+
+        <div className="flex flex-col gap-2 items-center lg:items-start">
+          <Skills />
+          <div className="w-full max-w-md flex lg:hidden flex-col items-center text-center">
+            <h2 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-600 to-white text-2xl md:text-3xl lg:text-3xl font-sans font-bold tracking-tight">
+              About me
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg text-neutral-400 mt-4">
+              I'm a third-year Software Engineering student passionate about
+              building innovative solutions powered by Machine Learning and
+              Generative AI.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Column: Image + About Me */}
+      <div
+        className="w-full flex flex-col items-center justify-center gap-6 lg:gap-8 
+                      order-1 lg:order-2"
+      >
+        {/* Image */}
+        <div className="flex items-center justify-center">
+          <div className="w-64 h-64 rounded-full overflow-hidden bg-[#0d0d0e] border flex items-center justify-center">
+            <Image
+              src="/chedi6.png"
+              alt="model"
+              width={3000}
+              height={3000}
+              quality={100}
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
+        {/* About Me */}
+        <div className="w-full max-w-md hidden lg:flex flex-col items-center  text-center ">
+          <h2 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-600 to-white text-2xl md:text-3xl lg:text-3xl font-sans font-bold tracking-tight">
+            About me
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg text-neutral-400 mt-4">
+            I'm a third-year Software Engineering student passionate about
+            building innovative solutions powered by Machine Learning and
+            Generative AI.
+          </p>
+        </div>
       </div>
-      
+
+      {/* Background Effects */}
+      <ShootingStars className="z-[-1]" />
+      <StarsBackground className="z-[-1]" />
     </div>
+  );
+};
 
-    {/* my image */}
-
-    <div className="w-full h-full flex items-end p-4 md:p-0 ">
-      <Image
-        src="/chedi2.png"
-        alt="model"
-        width={3000}
-        height={3000}
-        quality={100}
-        className="w-full max-h-[90vh] object-contain   rounded-3xl object-top bg-[#0d0d0e]" />
-    </div>
-
-
-    <div className="w-[90%] mx-auto md:py-[30px] flex flex-col items-center z-2">
-      
-
-
-      <h2 className="bg-clip-text md:mt-[100px] text-transparent text-start mr-auto bg-gradient-to-b  from-neutral-600 to-white text-2xl md:text-2xl lg:text-3xl font-sans relative z-20 font-bold tracking-tight">
-      About me
-    </h2>
-    <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-400 text-start mt-[20px]">
-    I'm a dedicated third-year Software Engineering student with a passion for developing innovative, high-quality software solutions. My academic journey has equipped me with a strong foundation inprogramming, system architecture, and system design.
-    </p>
-
-
-
-    <Skills/>
-
-
-    </div>
-
-    <ShootingStars className="z-[-1] " />
-    <StarsBackground className="z-[-1] " />
-
-
-    
-  </div >
-)
-
-
-
-
-}
-export default HeroSection
+export default HeroSection;
