@@ -23,7 +23,7 @@ export const certifications = [
   {
     title: "Oracle Generative AI Professional",
     description:
-      "Awarded for foundational knowledge and understanding of Oracle's Generative AI capabilities. Demonstrates ability to leverage Oracle's AI tools and technologies to build innovative solutions.",
+      "Awarded for foundational knowledge and understanding of Generative AI capabilities. From understanding the core principles of 𝗔𝗜, 𝗠𝗟, 𝗮𝗻𝗱 𝗗𝗟 to mastering 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗶𝘃𝗲 𝗔𝗜 𝗮𝗻𝗱 𝗥𝗔𝗚 systems.",
     src: "/Oracle Certification.png",
   },
 ];
