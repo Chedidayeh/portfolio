@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import {
+    IconBrain,
     IconBrowser,
     IconChartBar,
     IconCheck,
@@ -16,74 +17,87 @@ import { Cover } from "./ui/cover";
 import { NotebookText } from "lucide-react";
 
 export function Skills() {
-    const skills = [
-        {
-            title: "Software Design and Modeling",
-            description: "Proficient in UML diagrams (use case, class, sequence, etc.) and BPMN diagrams.",
-            icon: <IconLayout />,
-        },
+const skills = [
+  {
+    title: "Software Design and Modeling",
+    description:
+      "Strong understanding of software architecture and system design. Proficient in UML diagrams (use case, class, sequence, activity) and BPMN modeling for process visualization.",
+    icon: <IconLayout />,
+  },
+  {
+    title: "Programming Languages",
+    description:
+      "Proficient in Java, JavaScript, Python, and TypeScript.",
+    icon: <IconCode />,
+  },
+  {
+    title: "Machine Learning & AI Development",
+    description:
+      "Experienced with TensorFlow, PyTorch, scikit-learn, NumPy, Pandas, and Matplotlib for model training, evaluation, and data processing. Knowledge of embeddings, RAG systems, and Agentic AI workflows using LangChain and Hugging Face.",
+    icon: <IconBrain />,
+  },
+  {
+    title: "Backend Development",
+    description:
+      "Expertise in Express.js, ASP.NET, Spring Boot, and FastAPI. Skilled in building scalable APIs, microservices, and event-driven workflows using Inngest. Experienced in integrating AI-powered backends with vector databases for intelligent retrieval systems.",
+    icon: <IconServer />,
+  },
+  {
+    title: "Frontend Development",
+    description:
+      "Skilled in Next.js and React ecosystems with advanced UI and state management using Tailwind CSS, Zustand, Shadcn/ui, and Aceternity UI.",
+    icon: <IconBrowser />,
+  },
+  {
+    title: "Databases & Data Management",
+    description:
+      "Proficient in SQL and NoSQL systems including PostgreSQL, MySQL, MongoDB, and SQLite. Experienced with Prisma ORM, Neon, Firebase, and Supabase integrations. Skilled in managing vector databases like Pinecone for semantic search and GenAI applications.",
+    icon: <IconDatabase />,
+  },
+  {
+    title: "Integrations & APIs",
+    description:
+      "Experience with REST APIs, GraphQL, Strapi, and Headless CMS. Proficient in authentication systems (Auth0, Firebase) and vector embedding generation using Gemini text-embedding-004.",
+    icon: <IconPlug />,
+  },
+  {
+    title: "Cloud & Deployment",
+    description:
+      "Proficient in AWS, Azure, and Vercel for scalable deployment, hosting, and AI infrastructure configuration.",
+    icon: <IconCloud />,
+  },
+  {
+    title: "Testing & Quality Assurance",
+    description:
+      "Hands-on experience with Jest, Cypress, Selenium, and Postman for automated testing, integration validation, and API performance assurance.",
+    icon: <IconCheck />,
+  },
+  {
+    title: "DevOps & CI/CD",
+    description:
+      "Expert in Git, GitHub/GitLab workflows, and continuous integration/deployment pipelines using GitHub Actions. Familiar with Docker, Kubernetes, and MLOps best practices for model deployment.",
+    icon: <IconGitBranch />,
+  },
+  {
+    title: "Project Management & Methodologies",
+    description:
+      "Experienced in Agile and Scrum methodologies for iterative software development, sprint planning, and collaborative project delivery.",
+    icon: <NotebookText />,
+  },
+  {
+    title: "Tools & Runtime Environments",
+    description:
+      "Proficient with Node.js runtime, package managers (npm, pnpm, yarn), and modern developer toolchains for efficient full-stack development.",
+    icon: <IconTool />,
+  },
+  {
+    title: "Business Intelligence",
+    description:
+      "Experience in data integration and analytics using SSIS, Talend, and multidimensional/tabular modeling with SSAS for decision support systems.",
+    icon: <IconChartBar />,
+  },
+];
 
-        {
-            title: "Programming Languages",
-            description: "Proficient in Java, JavaScript, C#, and Python.",
-            icon: <IconCode />,
-        },
-        {
-            title: "Python Libraries & ML",
-            description: "Experienced with PyTorch, scikit-learn, NumPy, Pandas, Matplotlib, and Scikit-image for machine learning and data processing.",
-            icon: <IconCode />,
-        },
-        {
-            title: "Backend Development",
-            description: "Expertise in Express.js, ASP.NET, Spring Boot, FastAPI, and microservices architecture. Experienced in building event-driven workflows using Inngest and implementing RAG systems with vector databases.",
-            icon: <IconServer />,
-        },
-        {
-            title: "Frontend Development",
-            description: "Skilled in Next.js, React, and tools like Zustand, Shadcn/ui, Aceternity UI.",
-            icon: <IconBrowser />,
-        },
-        {
-            title: "Databases",
-            description: "Familiar with NoSQL, SQL, MySQL, PostgreSQL, MongoDB, and Prisma ORM (Neon, Firebase, and Supabase integration). Experienced in managing vector databases for semantic search and AI-powered applications.",
-            icon: <IconDatabase />,
-        },
-        {
-            title: "Third-Party Integrations and APIs",
-            description: "Experience with REST API, GraphQL, Strapi, Headless CMS, Auth0, Firebase, and Vercel. Skilled in using Gemini text-embedding-004 for creating vector embeddings.",
-            icon: <IconPlug />,
-        },
-        {
-            title: "Cloud Technologies",
-            description: "Proficient in AWS, Azure, and Vercel for deployment and hosting.",
-            icon: <IconCloud />,
-        },
-        {
-            title: "Quality Assurance and Testing",
-            description: "Skilled in Jest, JavaScript testing, Cypress, Selenium, Postman.",
-            icon: <IconCheck />,
-        },
-        {
-            title: "DevOps and Version Control",
-            description: "Expertise in Git, GitHub/GitLab workflows, CI/CD with GitHub Actions, Docker, and Kubernetes.",
-            icon: <IconGitBranch />,
-        },
-        {
-            title: "Development Methodologies",
-            description: "Experienced in delivering projects using Agile methodology.",
-            icon: <NotebookText />,
-        },
-        {
-            title: "Other Tools",
-            description: "Familiar with Node.js JavaScript runtime environment.",
-            icon: <IconTool />,
-        },
-                {
-            title: "Business Intelligence",
-            description: "Experience with ETL processes using SSIS and Talend, and multidimensional/tabular models with SSAS.",
-            icon: <IconChartBar />,
-        },
-    ];
     
     return (
         <>
