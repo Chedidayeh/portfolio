@@ -2310,7 +2310,7 @@ export const projects = [
     {
     title: "RAG Chatbot",
     description: "Intelligent PDF chatbot powered by Google Gemini + Pinecone Vector Database",
-    // link: "https://rag-chatbot-beta-seven.vercel.app",
+    link: "https://rag-chatbot-beta-seven.vercel.app",
     github: "https://github.com/Chedidayeh/rag-chatbot",
     image: "/RAG1.png",
     category: ["AI", "SaaS", "Next.js" , "Langchain" , "RAG"],
