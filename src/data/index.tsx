@@ -1578,7 +1578,7 @@ const ScrapeFlow = () => {
   return (
     <div className="bg-neutral-800 rounded-3xl mb-4">
 
-      <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6">Full Stack AI Career Coach with Next JS, Neon DB, Tailwind, Prisma, Inngest, Shadcn UI</h1>
+      <h1 className="text-2xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6">AI Workflow Automation</h1>
 
       <div className="flex justify-center w-full">
         <Tabs className="w-full max-w-4xl" defaultValue="core">
