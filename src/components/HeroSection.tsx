@@ -64,16 +64,19 @@ const HeroSection = () => {
           Dayeh Chadi, <br /> Software <Cover>Engineer</Cover>
         </motion.h2>
 
-        <motion.div className="flex flex-col gap-2 items-center lg:items-start" variants={itemVariants}>
+        <motion.div
+          className="flex flex-col gap-2 items-center lg:items-start"
+          variants={itemVariants}
+        >
           <Skills />
           <div className="w-full max-w-md flex lg:hidden flex-col items-center text-center">
             <h2 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-600 to-white text-2xl md:text-3xl lg:text-3xl font-sans font-bold tracking-tight">
               About me
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-neutral-400 mt-4">
-              I'm a third-year Software Engineering student passionate about
-              building innovative solutions powered by Machine Learning and
-              Generative AI.
+              I’m a Software Engineer with 3+ years of experience collaborating
+              with international clients and building scalable, high-performance
+              web applications using modern technologies.{" "}
             </p>
           </div>
         </motion.div>
@@ -86,7 +89,7 @@ const HeroSection = () => {
         variants={itemVariants}
       >
         {/* Image */}
-        <motion.div 
+        <motion.div
           className="flex items-center justify-center"
           variants={imageVariants}
         >
@@ -103,7 +106,7 @@ const HeroSection = () => {
         </motion.div>
 
         {/* About Me */}
-        <motion.div 
+        <motion.div
           className="w-full max-w-md hidden lg:flex flex-col items-center  text-center "
           variants={itemVariants}
         >
@@ -111,9 +114,9 @@ const HeroSection = () => {
             About me
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-neutral-400 mt-4">
-            I'm a third-year Software Engineering student passionate about
-            building innovative solutions powered by Machine Learning and
-            Generative AI.
+            I’m a Software Engineer with 3+ years of experience collaborating
+            with international clients and building scalable, high-performance
+            web applications using modern technologies.
           </p>
         </motion.div>
       </motion.div>

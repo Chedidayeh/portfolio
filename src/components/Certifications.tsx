@@ -26,6 +26,12 @@ export const certifications = [
       "Awarded for foundational knowledge and understanding of Generative AI capabilities. From understanding the core principles of 𝗔𝗜, 𝗠𝗟, 𝗮𝗻𝗱 𝗗𝗟 to mastering 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗶𝘃𝗲 𝗔𝗜 𝗮𝗻𝗱 𝗥𝗔𝗚 systems.",
     src: "/Oracle Certification.png",
   },
+  {
+    title: "Hashgraph Developer Course",
+    description:
+      "Completed the Hashgraph Developer Course, gaining expertise in building decentralized applications on the Hedera Hashgraph platform. Acquired skills in smart contract development, consensus mechanisms, and distributed ledger technology.",
+    src: "/Hedera Hashgraph Developer Certificate.png",
+  }
 ];
 
 export function Certifications() {

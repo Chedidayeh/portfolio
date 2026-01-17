@@ -3,7 +3,7 @@ import { Certifications } from "@/components/Certifications";
 import { Contact } from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import HeroSection from "@/components/HereSection";
+import HeroSection from "@/components/HeroSection";
 import { Skills } from "@/components/MySkills";
 import { NavBar } from "@/components/NavBar";
 import { Projects } from "@/components/Projects";

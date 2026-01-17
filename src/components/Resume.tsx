@@ -13,9 +13,9 @@ export function Resume() {
             <h4 className="text-[#f4f4f4] text-xl sm:text-2xl md:text-[1.8rem] font-[600]">
               <Cover>+ Tunisian Baccalaureate Degree</Cover>
             </h4>
-            <span className="text-blue-500 my-2 sm:my-[10px] font-semibold block">
+            {/* <span className="text-blue-500 my-2 sm:my-[10px] font-semibold block">
               2020 - 2021
-            </span>
+            </span> */}
             <p className="mb-4 sm:mb-8 text-xs sm:text-sm md:text-base font-semibold text-neutral-200">
               High School Diploma
             </p>
@@ -27,9 +27,9 @@ export function Resume() {
                 + Preparatory cycles for engineering studies at ISIMS
               </Cover>
             </h4>
-            <span className="text-blue-500 my-2 sm:my-[10px] font-semibold block">
+            {/* <span className="text-blue-500 my-2 sm:my-[10px] font-semibold block">
               2021 - 2023
-            </span>
+            </span> */}
             <p className="mb-4 sm:mb-8 text-xs sm:text-sm md:text-base font-semibold text-neutral-200">
               ISIMS (Higher Institute of Computer Scienceand Multimedia of
               Sfax).
@@ -40,9 +40,9 @@ export function Resume() {
             <h4 className="text-[#f4f4f4] text-xl sm:text-2xl md:text-[1.8rem] font-[600]">
               <Cover>+ Software Engineering Degree</Cover>
             </h4>
-            <span className="text-blue-500 my-2 sm:my-[10px] font-semibold block">
+            {/* <span className="text-blue-500 my-2 sm:my-[10px] font-semibold block">
               2023 - 2026
-            </span>
+            </span> */}
             <p className="mb-4 sm:mb-8 text-xs sm:text-sm md:text-base font-semibold text-neutral-200">
               Software Engineering at ISIMS (Higher Institute of Computer
               Scienceand Multimedia of Sfax).
@@ -59,24 +59,24 @@ export function Resume() {
             <h4 className="text-[#f4f4f4] text-xl sm:text-2xl md:text-[1.8rem] font-[600]">
               <Cover>+ Freelancing - Upwork</Cover>
             </h4>
-            <span className="text-blue-500 my-2 sm:my-[10px] font-semibold block">
+            {/* <span className="text-blue-500 my-2 sm:my-[10px] font-semibold block">
               January 2025 - Today
-            </span>
+            </span> */}
             <p className="mb-4 sm:mb-8 text-xs sm:text-sm md:text-base font-semibold text-neutral-200">
               Work as a Full Stack Developer at Upwork
               <br />
-              Click{" "}
+              {/* Click{" "}
               <LinkPreview
                 url="https://www.upwork.com/freelancers/~013a32a87b6c945b37?mp_source=share"
                 className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
               >
                 Here
               </LinkPreview>{" "}
-              to view my upwork profile.
+              to view my upwork profile. */}
             </p>
           </div>
 
-          <div>
+          {/* <div>
             <h4 className="text-[#f4f4f4] text-xl sm:text-2xl md:text-[1.8rem] font-[600]">
               <Cover>+ Summer internship at “After Code”</Cover>
             </h4>
@@ -93,7 +93,7 @@ export function Resume() {
               intelligence.
               
             </p>
-          </div>
+          </div> */}
         </div>
       ),
     },
